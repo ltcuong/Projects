@@ -1,0 +1,464 @@
+/* CSS Document */
+*{
+margin:0 auto;
+padding:0;
+}
+a{
+	text-decoration:none;
+}
+ul li{
+	list-style:none;
+}
+body{
+	margin:0 auto;
+	padding:0;
+	font-size:13px;
+	font-weight: normal;
+	color:#2e2e2e;
+	line-height:18px;
+	font-size:13px;
+	font-family: "Times New Roman", Georgia, Serif !important;
+}
+/* header{
+  background:url(../images/quanlyluutru_01.jpg) repeat-x;
+  height:170px;
+} */
+/**header content***/
+header .header_content{
+	width:1000px;
+	margin:0 auto;
+	padding:0;
+}
+header .header_content .logo{
+	float:left;
+	width:100%;
+}
+header .header_content .menu{
+	float:left;
+	width:100%;
+	height: 31px;
+	margin-top:5px;
+	background: url(../images/icon-home.png) 5px 3px no-repeat #fdff63;
+	font-size:101%;
+	position:relative;
+}
+header .header_content .menu ul{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    z-index: 9999 !important;	
+}
+
+header .header_content .menu ul li {
+    display: inline;
+    float: left;
+    position: relative;
+	 line-height: 31px;
+    z-index: 9999 !important;
+}
+header .header_content .menu ul li a {
+    color: #d40000;
+    display: block;
+    font-size: 12px;
+    line-height: 31px;
+    padding: 0 13px;
+    text-decoration: none;
+}
+header .header_content .menu #user{
+    position:absolute;
+	width:250px;
+	height:27px;
+	top:0px;
+	right:5px;
+	padding-top:4px;
+}
+header .header_content .menu #user input[type="button"]
+{
+	float:right;
+	background:#d40000;
+	font-weight:bold;
+	color:#FFF;
+	border:none;
+	padding-top:2px;
+	padding-bottom:2px;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+	width:100px;
+	margin-right: 10px;
+	margin-right:0px;
+	cursor:pointer;
+	margin-left:5px;
+}
+/**end header content***/
+section{
+	min-height:700px;
+	margin-top:10px;
+}
+section.frmlogin{
+	min-height:400px;
+}
+section .contaniner{
+	width:1000px;
+	margin:0 auto;
+	padding:0;
+}
+section .contaniner .col_left{
+	float:left;
+	width:205px;
+	height:710px;
+}
+section .contaniner .col_left .menu_left{
+	width:202px;
+	float:left;
+	background:#01b863;
+	height:600px;
+}
+section .contaniner .col_left .menu_left ul{
+	margin-top:5px;
+	width:180px;
+	padding-left:10px;
+}
+section .contaniner .col_left .menu_left ul li{
+	width:180px;
+	float:left;
+	padding-top:5px;
+	padding-bottom:5px;
+	border-bottom:1px solid #CCC;
+}
+section .contaniner .col_left .menu_left ul li a{
+	color:#FFF;
+	font-size:13px;
+	background:url(../images/list.png) no-repeat;
+	background-position:0px 5px;
+	padding-left:10px;
+}
+section .contaniner .col_left .menu_left ul li a:hover{
+	color:#fcff00;
+}
+section .contaniner .col_left .menu_left ul li a.active{
+	color:#fcff00;
+}
+section .contaniner .col_right{
+	float:left;
+	width:790px;
+	margin-left:5px;
+	height:750px;
+}
+section .contaniner .col_right .achor_link{
+	float:left;
+	width:790px;
+	padding-left:20px;
+	line-height:10px;
+	font-weight:bold;
+	padding-top:5px;
+	padding-bottom:5px;
+	background:url(../images/home.png) no-repeat;
+	margin-bottom:20px;
+}
+section .contaniner .col_right .label{
+	float:left;
+	background:#e60200;
+	width:780px;
+	padding-top:10px;
+	padding-bottom:10px;
+	color:#FFF;
+	font-size:14px;
+	font-weight:bold;
+	box-shadow:2px 2px 2px #CCCCCC;
+	padding-left:10px;
+}
+section .contaniner .col_right .box-content{
+	float:left;
+	width:780px;
+	padding-left:10px;
+}
+section .contaniner .col_right .box-content ul{
+	float:left;
+	width:770px;
+}
+section .contaniner .col_right .box-content ul li{
+	float:left;
+	width:780px;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+section .contaniner .col_right .box-content ul li .row{
+	float:left;
+	width:780px;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+section .contaniner .col_right .box-content ul li .row .label{
+	float:left;
+	width:150px;
+	background:none;
+	color:#4e4e4e;
+	font-weight:normal;
+	box-shadow:none;
+}
+section .contaniner .col_right .box-content ul li .row .active{
+	color:#F00;
+}
+
+section .contaniner .col_right .box-content ul li .row .input{
+	float:left;
+	padding-top:5px;
+	padding-bottom:5px;
+	width:600px;
+	
+	
+}
+section .contaniner .col_right .box-content ul li .row .input input
+{
+	background:#f4eeee;
+	width:220px;
+	border:0px;
+	padding-top:4px;
+	padding-bottom:4px;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+section .contaniner .col_right .box-content ul li .row .input input[type="radio"]
+{
+	width:auto;
+	border:none;
+	border-radius:none;
+	margin-right:10px;
+	margin-left:10px;
+}
+section .contaniner .col_right .box-content ul li .row .input input[type="submit"],
+section .contaniner .col_right .box-content ul li .row .input input[type="reset"]
+{
+	float:right;
+	background:#d40000;
+	font-weight:bold;
+	color:#FFF;
+	border:none;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+	width:100px;
+	margin-right: 10px;
+	cursor:pointer;
+}
+section .contaniner .col_right .box-content ul li .row  input[type="button"]
+{
+	float:right;
+	background:#d40000;
+	font-weight:bold;
+	color:#FFF;
+	border:none;
+	padding-top:5px;
+	padding-bottom:5px;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+	width:100px;
+	margin-right: 10px;
+	margin-right:0px;
+	margin-left:5px;
+	cursor:pointer;
+}
+section .contaniner .col_right .box-content ul li .row .input input.active{
+	border:1px solid #F00;
+}
+section .contaniner .col_right .box-content ul li .row .input .w-150
+{
+	width:150px;
+}
+section .contaniner .col_right .box-content ul li .row .input .w-200
+{
+	width:200px;
+}
+section .contaniner .col_right .box-content ul li .row .input .w-250
+{
+	width:250px;
+}
+section .contaniner .col_right .box-content ul li .row .input .w-550
+{
+	width:550px;
+}
+section .contaniner .col_right .box-content ul li.border{
+	border-bottom:3px solid #CCC;
+	margin-top:10px;
+	
+}
+/***table**/
+section .contaniner .col_right .box-content table{
+	width:100%;
+	height: 100%;
+    margin: 0;
+    padding: 0;
+	text-align:center;
+	margin-top:10px;
+	border:1px solid #dddddd;
+	border-bottom:none;
+}
+section .contaniner .col_right .box-content table thead tr{
+	background:#fcfdaa;
+	border-bottom: solid 1px #dddddd !important;
+}
+section .contaniner .col_right .box-content table  tr td
+{
+	
+    border-color: #dddddd;
+	
+    border-style: solid;
+    border-width: 0 0 1px 1px;
+    color: #019b54;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+section .contaniner .col_right .box-content table  tr td input
+{
+	background:#dedede;
+	border:1px solid  #999;
+}
+section .contaniner .col_right .box-content table  tr.row1
+{
+	background:#f9f9f9;
+}
+/***login**/
+section .contaniner #frm_login {
+	width:330px;
+	margin-left:300px;
+	float:left;
+}
+section .contaniner #frm_login  .contain_header{
+	width:330px;
+	height:38px;
+	float:left;
+	background:#cc0001;
+	box-shadow:2px 2px 2px #CCCCCC;
+}
+section .contaniner #frm_login  .contain_header p{
+	color:#FFF;
+	padding-top:8px;
+	padding-left:8px;
+	font-weight:bold;
+	font-size:13px;
+}
+section .contaniner #frm_login  .login{
+	float:left;
+	width:326px;
+	border:2px solid #CCC;
+	border-top:none;
+	box-shadow:#CCC ;
+}
+section .contaniner #frm_login  .login ul{
+	float:left;
+	width:325px;
+	list-style:none;
+}
+section .contaniner #frm_login  .login ul li{
+	width:315px;
+	float:left;
+	padding-left:10px;
+	padding-top:5px;
+	padding-bottom:5px;
+	margin-bottom:5px;
+}
+section .contaniner #frm_login  .login ul li .row{
+	float:left;
+	width:315px;
+	padding-top:3px;
+	padding-bottom:3px;
+}
+section .contaniner #frm_login  .login ul li .row .label{
+	float:left;
+	width:80px;
+}
+section .contaniner #frm_login  .login ul li .row .input{
+	float:left;
+	width:230px;
+	
+	
+}
+section .contaniner #frm_login  .login ul li .row .input input
+{
+	background:#f4eeee;
+	width:220px;
+	border:0px;
+	padding-top:4px;
+	padding-bottom:4px;
+	-moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+    border-radius: 2px;
+}
+section .contaniner #frm_login  .login ul li .row .input input[type='submit']
+{
+	float:right;
+	background:#d40000;
+	font-weight:bold;
+	color:#FFF;
+	width:100px;
+	margin-right: 10px;
+}
+section .contaniner #frm_login  .login ul li  .message{
+	width:300px;
+	float:left;
+	border-top:1px solid #000;
+	padding-top:10px;
+}
+section .contaniner #frm_login  .login ul li  .message .message_content{
+	float:left;
+	width:300px;
+	background:#feffa5;
+	height:50px;
+}
+section .contaniner #frm_login  .login ul li  .message .message_content #alert{
+	float:left;
+	width:42px;
+	height:42px;
+	background:url(../images/alert.png) no-repeat;
+	background-position:3px 3px;
+}
+section .contaniner #frm_login  .login ul li  .message .message_content #mess{
+	float:left;
+	width:249px;
+	padding-left:5px;
+	padding-top:5px;
+	font-weight:bold;
+}
+/*****/
+footer{
+  background:url(../images/quanlyluutru_03.jpg) repeat-x;
+  height:202px;
+}
+footer .footer_content{
+	width:1000px;
+	margin:0 auto;
+	padding:0;
+}
+footer .footer_content .copycright{
+	float:left;
+	width:100%;
+	margin-top: 130px;
+}
+.DisplayNone {
+	display: none;
+}
+#LabelHeaderWeb {
+	 color: white;
+    font-size: 20px;
+    font-weight: bold;
+    left: 155px;
+    position: absolute;
+    text-shadow: 2px 3px black;
+    top: 37px;
+}

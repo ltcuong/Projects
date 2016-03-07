@@ -1,0 +1,318 @@
+﻿<!--?xml version="1.0"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>Phần mềm qhòng công chứng</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/general.css" rel="stylesheet" />
+    <link href="css/noise-red.css" rel="stylesheet" />
+    <link href="css/myStyle.css" rel="stylesheet" type="text/css" />
+
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link href="css/admin.css" type="text/css" rel="stylesheet" />
+    <link href="css/colorbox.css" type="text/css" rel="stylesheet" />
+
+    <link href="css/jquery.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.tabs.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.tooltip.js"></script>
+</head>
+<body>
+    <script>
+        function showPopUpDivWithSize(id, width, height) {
+            var divId = "#" + id;
+            $.colorbox({
+                inline: true,
+                href: divId,
+                width: width,
+                height: height,
+                onClosed: function () {
+                }
+            });
+        }
+        $(function () {
+
+        });
+</script>
+    <div class="mainContainer">
+        <header>
+		<div>
+			<a href="#" class="logo"> <img src="images/logoca.png"
+				style="height: 85px;"></a>
+		</div>
+		</header>
+        <div style="display: block;" class="widgetBar">
+            <div class="barInner">
+                <div>
+                    <ul class="navigation">
+                        <li><a href="javascript:void(0);" class="active">Tra cứu</a>
+                            <ul class="" style="" id="MenuNhomID">
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Danh sách hợp đồng</a></li>
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Tài sản</a></li>
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Quản lý đương sự</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content contentRight">
+            <div class="topBar">
+                <div class="topBarInner">
+                    <div id="ctl00_pnKinhDoanh">
+                        <ul class="breadcrumbs">
+                            <li><a href="javascript:void(0)">
+                                <img
+                                    src="images/home5.png"></a></li>
+                            <li><a href="HoSoCaNhan.html">Bổ trợ tư pháp</a></li>
+                        </ul>
+                    </div>
+                    <ul class="profile barButtons">
+                        <li class="profile"><a href="DangNhap.html"
+                            onclick="logoutButton();">Đăng xuất</a></li>
+                    </ul>
+                    <ul class="profile barButtons">
+                        <li class="profile"><a href="#">
+                            <img
+                                src="images/member2.png" alt="">
+                            Chào mừng: <span
+                                id="ctl00_LoginName1" style="font-weight: bold;">Công chứng viên</span>
+                            <span class="arrow"></span><span class="expand"></span></a></li>
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+            <div class="contentInner" id="ContentBodyID">
+                <!--Begin body !-->
+                <div class="col_right">
+                    <div class="box-content">
+                        <div>
+                            <div class="col_right">
+                                <div class="achor_link">
+                                    <img src="images/Home.png" height="16px;" width="16px;">Thông tin tài sản<img src="images/Next.png">
+                                    Tàu kéo ghe thuyền   </div>
+                                <div class="box-content">
+                                    <!--Begin table !-->
+                                    <table width="100%" cellspacing="5" cellpadding="5" border="0" class="form">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="6">
+                                                    <p style="color: #e60200;">
+                                                        <strong>Thông tin tài sản</strong>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                           <!--Begin Dong 1 !-->
+                                            <tr>
+                                                <td style="text-align: right; width:15%;">Tên phiếu tài sản</td>
+                                                <td colspan="2" style="width:30%">
+                                                    <input type="text" class="w-200" id="TenPhieuTaiSanID"  value="" name="tenPhieuTaiSan" />
+                                                </td>
+                                                <td style="text-align: right; width:15%">Tên tàu</td>
+                                                <td colspan="2" style="width:30%">
+                                                   <input type="text" class="w-200" id="TenTauID"  value="" name="tenTau"/>
+                                                </td>
+                                            </tr>
+                                            <!--End Dong 1 !-->
+                                            <tr>
+                                                <td style="text-align: right; ">Số hiệu</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="SoHieuID" value="" name="soHieu"/>
+                                                </td>
+                                                <td style="text-align: right; color : blue ;">Biển kiểm soát</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="BienKiemSoatID" value="" name="bienKiemSoat"/>
+                                                </td>
+                                            </tr>
+                                            <tr>                                                
+                                                <td style="text-align: right; ">Cơ quan đăng ký</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="CoQuanDangKyID" value="" name="coQuanDangKy"/>
+                                                </td>
+												<td style="text-align: right; ">Loại tàu</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="LoaiTauID" value="" name="loaiTau"/>
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right; ">Công dụng</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="CongDungID" value="" name="congDung" />
+                                                </td>
+                                                <td style="text-align: right;">Nơi đóng</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="NoiDongID" value="" name="noiDong" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: right; ">Năm đóng</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="NamDongID" value="" name="namDong" />
+                                                </td>
+                                                <td style="text-align: right;">Mẩu thiết kế</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="MauThietKeID" value="" name="mauThietKe" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right; ">Cơ quan thiết kế</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="CoQuanThietKeID" value="" name="coQuanThietKe" />
+                                                </td>
+                                               <td style="text-align: right; ">Chiều dài Lmax</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="ChieuDaiLmaxID" value="" name="chieuDaiLmax" />
+                                                </td>
+                                            </tr>
+											 <tr>
+                                                <td style="text-align: right;">Ltk</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="LtkID" value="" name="ltk" />
+                                                </td>
+                                                <td style="text-align: right;">Chiều rộng B</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="ChieuRongBmaxID" value="" name="chieuRongBmax" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right;">Btk</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="BtkID" value="" name="btk" />
+                                                </td>
+                                                <td style="text-align: right; ">Chiều cao D</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="ChieuCaoDmaxID" value="" name="chieuCaoDmax" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                 <td style="text-align: right;">Chiều chìm d</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="ChieuChimDID" value="" name="chieuChimD" />
+                                                </td>
+                                                <td style="text-align: right;">Mạn khô f</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="ManKhoFID" value="" name="manKhoF" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right; ">Vật liệu vỏ</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="VatLieuVoID" value="" name="vatLieuVo" />
+                                                </td>
+                                                <td style="text-align: right;">Tổng dung tích</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="TongDungTichTDKID" value="" name="tongDungTichTDK" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right; ">Sức chở tối đa (tấn)</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="SucChoToiDaID" value="" name="sucChoToiDa" />
+                                                </td>
+                                                <td style="text-align: right;">Tốc độ tự do (hải lý/h)</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="TocDoTuDoID" value="" name="tocDoTuDo" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right; ">Ký hiệu máy</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="KyHieuMayID" value="" name="kyHieuMay" />
+                                                </td>
+                                                 <td style="text-align: right; ">Số máy</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="SoMayID" value="" name="soMay" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right;">Công suất (Mã lực)</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="CongSuatID" value="" name="congSuat" />
+                                                </td>
+												<td style="text-align: right; ">Nơi chế tạo</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="NoiCheTaoID" value="" name="noiCheTao" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right;">Cảng đăng ký</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="CangDangKyID" value="" name="cangDangKy" />
+                                                </td>
+												<td style="text-align: right; ">Cơ quan đăng kiểm</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="CoQuanDangKiemID" value="" name="coQuanDangKiem" />
+                                                </td>
+                                            </tr>
+											<tr>                                             
+                                                <td style="text-align: right;">GCN ĐK tàu số</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="GCNDKTauSoID" value="" name="gCNDKTauSo" />
+                                                </td>
+												<td style="text-align: right; ">Ngày cấp GCN ĐK tàu</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="NgayCapGCNDKTauID" value="" name="ngayCapGCNDKTau" />
+                                                </td>
+                                            </tr>
+											<tr>                                                
+                                                <td style="text-align: right;">Nơi cấp GCN ĐK tàu</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="NoiCapGCNDKTauID" value="" name="noiCapGCNDKTau" />
+                                                </td>
+												  <td style="text-align: right;">Ghi chú về tài sản</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="GhiChuVeTaiSanID" value="" name="ghiChuVeTaiSan" />
+                                                </td>
+                                            </tr>
+											<tr>
+                                                <td style="text-align: right; ">Số đăng ký cũ</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="SoDangKyCuID" value="" name="soDangKyCu" />
+                                                </td>
+                                              
+                                            </tr>
+										<!--	<tr>
+                                               <td style="text-align: right; ">Tỉnh thường trú</td>
+                                                <td colspan="2">
+                                                    <select class="w-200" id="TinhThuongTruID" name="tinhThuongTru">
+                                                        <option value="-1" selected="selected">--Tất cả--</option>
+                                                    </select>
+                                                </td>
+                                            </tr> -->
+                                        </tbody>
+                                    </table>
+                                    <!--End table !-->
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+               <!--End body !-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

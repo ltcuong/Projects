@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Quản lý thường trú</title>
+    <link href="css/general.css" type="text/css" rel="stylesheet" />
+    <link href="css/noise-red.css" type="text/css" rel="stylesheet" />
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/style.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="js/jquery-1.js"></script>
+    <script type="text/javascript" src="js/loginadmin.js"></script>
+</head>
+<body>
+    <div class="mainContainer">
+        <header>
+		<div>
+			<a href="#" class="logo"> 
+				<img src="images/logoca.png" alt=""/>
+			</a>
+		</div>
+		</header>
+        <section class="frmlogin">
+<div class="contaniner">
+    <div style="padding-left: 100px; margin-top: 10px; margin-bottom:10px; width:800px">
+        <table width="100%">
+            <tbody>
+                <tr>
+                    <td><div style="width:50px"><img src="images/Home.png"></div></td>
+                    <td><div><h2><a href="#">Trang thông tin điện tử sở tư pháp</a></h2></div></td>
+                    <td><div style="width:50px"><img src="images/doc.png"></div></td>
+                    <td><div><h2><a href="#">Tài liệu hướng dẫn sử dụng</a></h2></div></td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+	
+			</div>				
+<div id="frm_login">
+		<div class="contain_header">
+			<p>ĐĂNG NHẬP</p>
+		</div>
+		<div class="login">
+			<ul>
+				<li>
+					<div class="row">
+						<div class="label" style="text-align: right; padding-right: 3px;">Tên đăng nhập</div>
+						<div class="input">
+							<input id="TaiKhoanUserID" name="taikhoan_dangnhap" value="admin" autocomplete="off" type="text">
+						</div>
+					</div>
+				</li>                
+				<li>
+                    <div class="row">
+						<div class="label" style="text-align: right; padding-right: 3px;">Mật khẩu</div>
+						<div class="input">
+							<input id="TaiKhoanMatKhauID" name="taikhoan_matkhau" value="admin" autocomplete="off" onkeypress="loginAdmin(event)" type="password">
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="row">
+						<div class="label">&nbsp;</div>
+						<div class="input">
+							<a href="DanhSachHoSo.html">
+							<input style="float:left;" value="Đăng nhập" id="BtnDangNhapID" type="submit"></a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="message">
+						<div class="message_content">														
+							<table width="100%">
+								<tbody>
+									<tr id="LoginError1">
+										<td><img style="border-width: 0px; padding-left: 5px; padding-top: 5px; height: 40px; width: 40px;" src="images/info-message.png" id="imgMessage"></td>
+										<td><span style="font-weight: bold; padding-top: 5px; padding-left: 5px;" id="lblMessage">Nhập tên đăng nhập và mật khẩu.</span>
+											<div class="DisplayNone" id="updateProcessing">
+												<div style="padding-left: 5px;">
+													<img src="images/ajax-loader.gif">
+												</div>
+											</div></td>
+									</tr>
+									<tr id="LoginError2" class="DisplayNone">
+										<td><img style="border-width: 0px; padding-left: 5px; padding-top: 5px; height: 40px; width: 42px;" src="images/alert.png" id="imgMessage"></td>
+										<td><span style="font-weight: bold; padding-top: 5px; padding-left: 5px;" id="lblMessage">Tên đăng nhập hoặc mật khẩu không đúng.</span>
+										</td>
+									</tr>
+									<tr id="LoginError3" class="DisplayNone">
+										<td><img style="border-width: 0px; padding-left: 5px; padding-top: 5px; height: 40px; width: 42px;" src="images/alert.png" id="imgMessage"></td>
+										<td><span style="font-weight: bold; padding-top: 5px; padding-left: 5px;" id="lblMessage">Tài khoản đã bị khóa.</span>
+										</td>
+									</tr>
+									<tr id="LoginError4" class="DisplayNone">
+										<td><img style="border-width: 0px; padding-left: 5px; padding-top: 5px; height: 40px; width: 42px;" src="images/alert.png" id="imgMessage"></td>
+										<td><span style="font-weight: bold; padding-top: 5px; padding-left: 5px;" id="lblMessage">Chưa gắn thiết bị token.</span>
+										</td>
+									</tr>
+									<tr id="LoginError5" class="DisplayNone">
+										<td><img style="border-width: 0px; padding-left: 5px; padding-top: 5px; height: 40px; width: 42px;" src="images/alert.png" id="imgMessage"></td>
+										<td><span style="font-weight: bold; padding-top: 5px; padding-left: 5px;" id="lblMessage">Tài khoản thuộc nhóm này đã bị khóa.</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+		</div>    
+	    </div>    
+    <div>        
+    </div>
+    </div>
+</section>
+    </div>
+
+
+</body>
+</html>
