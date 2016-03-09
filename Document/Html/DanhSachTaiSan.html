@@ -50,6 +50,77 @@
 
         });
 </script>
+
+	<script>
+	$(document).ready(function()
+{
+ $("#LoaiTaiSanID").change(function()
+ {
+  if($(this).val() == "Nha")
+  {
+   $("#TenChuSoHuuCaNhanID").show();
+	$("#GiayCNQSDDID").show();
+	$("#ChuSoHuu").show();
+	$("#GiayCNQSDDSO").show();
+	$("#SoThuaID").show();
+	$("#ToBanDoSoID").show();
+	$("#SoThua").show();
+	$("#ToBanDo").show();
+	
+  }
+  else
+  {
+   $("#TenChuSoHuuCaNhanID").hide();
+	$("#GiayCNQSDDID").hide();
+	$("#ChuSoHuu").hide();
+	$("#GiayCNQSDDSO").hide();
+	$("#SoThuaID").hide();
+	$("#ToBanDoSoID").hide();
+	$("#SoThua").hide();
+	$("#ToBanDo").hide();
+	
+  }
+  if($(this).val() == "MayMoc")
+  {
+   $("#SoMayID").show();
+	$("#SoMay").show();		
+  }
+  else
+  {
+   $("#SoMayID").hide();
+	$("#SoMay").hide();		
+  }
+  if($(this).val() == "Oto")
+  {
+  $("#BienKiemSoat").show();
+   $("#BienKiemSoatID").show();
+	$("#SoKhungID").show();
+	$("#SoKhung").show();	
+  }
+  else
+  {  
+   $("#BienKiemSoatID").hide();
+	$("#SoKhungID").hide();
+$("#BienKiemSoat").hide();
+	$("#SoKhung").hide();
+  }
+ });
+ $("#BienKiemSoatID").hide();
+	$("#SoKhungID").hide();
+ $("#BienKiemSoat").hide();
+	$("#SoKhung").hide();
+ $("#SoMayID").hide();
+	$("#SoMay").hide();
+ $("#ToBanDo").hide();
+ $("#SoThua").hide();
+ $("#ToBanDoSoID").hide();
+ $("#SoThuaID").hide();
+ $("#GiayCNQSDDSO").hide();
+	$("#ChuSoHuu").hide();
+	$("#TenChuSoHuuCaNhanID").hide();
+	$("#GiayCNQSDDID").hide();
+});	
+	</script>
     <div class="mainContainer">
         <header>
 		<div>
@@ -115,7 +186,7 @@
                                 <div class="achor_link">
                                     <img src="images/Home.png" height="16px;" width="16px;">
                                     Tra cứu<img src="images/Next.png">
-                                    Danh sách hợp đồng
+                                    Danh sách tài sản
 							
                                 </div>
                                 <div class="box-content">
@@ -160,13 +231,13 @@
                                             <tr>
                                                 <td style="text-align: right; ">Chọn loại tài sản</td>
                                                 <td colspan="2">
-                                                    <select class="w-200" id="">
+                                                    <select class="w-200" id="LoaiTaiSanID" name="loaiTaisan">
                                                         <option value="0">--- Chọn ---</option>
-                                                        <option value="1">Nhà</option>
-                                                        <option value="2">Căn hộ</option>
-                                                        <option value="3">Công trình kiến trúc</option>
-                                                        <option value="4">Máy móc</option>
-														<option value="4">Tài sản là bất động sản khác</option>
+                                                        <option value="Nha">Nhà</option>
+                                                        <option value="Nha">Căn hộ</option>
+                                                        <option value="Nha">Công trình kiến trúc</option>
+                                                        <option value="MayMoc">Máy móc</option>
+														<option value="Oto">Ô Tô</option>
                                                     </select></td>
                                                 <td style="text-align: right; ">Tên phiếu tài sản</td>
                                                 <td colspan="2">
@@ -174,45 +245,42 @@
                                                    </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: right; ">Tên chủ sở hữu(cá nhân)</td>
+                                                <td id="ChuSoHuu" style="text-align: right; ">Chủ sở hữu</td>
                                                 <td colspan="2">
                                                     <input type="text" class="w-200" id="TenChuSoHuuCaNhanID" name="tenChuSoHuuCaNhan"
                                                         value=""></td>
-                                                <td style="text-align: right; ">Tên chủ sở hữu(tổ chức)</td>
+                                                <td id="GiayCNQSDDSO" style="text-align: right; ">Giấy CNQSDD số</td>
                                                 <td colspan="2">
-												<input type="text" class="w-200" id="TenChuSoHuuToChucID" name="tenChuSoHuuToChuc"
+												<input type="text" class="w-200" id="GiayCNQSDDID" name="giayCNQSDD"
                                                         value="">
                                                     </td>
                                             </tr>
-                                            <tr>
-                                                <td style="text-align: right; ">Giấy CNQSD số</td>
-                                                <td colspan="2">
-                                                    <input type="text" class="w-200" id="GiayCNQSDID" name="giayCNQSD"
-                                                        value=""></td>
-                                                <td style="text-align: right;">Giấy CNQSH số</td>
-                                                <td colspan="2">
-                                                    <input type="text" class="w-200" id="GiayCNQSHID" name="giayCNQSH"
-                                                        value=""></td>
-                                            </tr>
+                                            
 											
 											<tr>
-                                                <td style="text-align: right; ">Số thửa</td>
+                                                <td id="SoThua" style="text-align: right; ">Số thửa</td>
                                                 <td colspan="2">
-                                                    <input type="text" class="w-200" id="SoThua"
+                                                    <input type="text" class="w-200" id="SoThuaID" name="soThua"
                                                         value=""></td>
-                                                <td style="text-align: right;">Tờ bàn đồ số</td>
+                                                <td id="ToBanDo" style="text-align: right;">Tờ bàn đồ số</td>
                                                 <td colspan="2">
-                                                    <input type="text" class="w-200" id="ToBanDoSo"
+                                                    <input type="text" class="w-200" id="ToBanDoSoID" name="toBanDoSo"
                                                         value=""></td>
                                             </tr>
 											<tr>
-                                                <td style="text-align: right; ">Biển kiểm soát</td>
+                                                <td id="SoMay" style="text-align: right; ">Số máy</td>
                                                 <td colspan="2">
-                                                    <input type="text" class="w-200" id="BienKiemSoat"
+                                                    <input type="text" class="w-200" id="SoMayID" name="soMay"
                                                         value=""></td>
-                                                <td style="text-align: right;">Số khung</td>
+                                            </tr>
+											<tr>
+                                                <td id="BienKiemSoat" style="text-align: right; ">Biển kiểm soát</td>
                                                 <td colspan="2">
-                                                    <input type="text" class="w-200" id="SoKhung"
+                                                    <input type="text" class="w-200" id="BienKiemSoatID" name="bienKiemSoat"
+                                                        value=""></td>
+                                                <td id="SoKhung" style="text-align: right;">Số khung</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-200" id="SoKhungID" name="soKhung"
                                                         value=""></td>
                                             </tr>
 											

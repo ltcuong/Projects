@@ -50,6 +50,50 @@
 
         });
 </script>
+<script>
+$(document).ready(function()
+{
+ $("#LoaiTaiSanID").change(function()
+ {
+  if($(this).val() == "Nha")
+  {
+   $("#GiayCNQSDD").show();
+   $("#GiayCNQSDDID").show();
+  }
+  else
+  {
+   $("#GiayCNQSDD").hide();
+   $("#GiayCNQSDDID").hide();
+  }
+  if($(this).val() == "MayMoc")
+  {
+   $("#SoMayID").show();
+   $("#SoMay").show();
+  }
+  else
+  {
+   $("#SoMayID").hide();
+   $("#SoMay").hide();
+  }
+  if($(this).val() == "OTo")
+  {
+   $("#BienKiemSoatID").show();
+   $("#BienKiemSoat").show();
+  }
+  else
+  {
+   $("#BienKiemSoatID").hide();
+   $("#BienKiemSoat").hide();
+  }
+ });
+ $("#SoMayID").hide();
+ $("#BienKiemSoatID").hide();
+ $("#BienKiemSoat").hide();
+ $("#SoMay").hide();
+ $("#GiayCNQSDDID").hide();
+ $("#GiayCNQSDD").hide();
+});
+</script>
     <div class="mainContainer">
         <header>
 		<div>
@@ -156,17 +200,17 @@
                                                 </td>
                                             </tr>
 											<tr>
-											<td style="width: 11%; text-align: right; ">Số quyết định</td>
+											<td style="width: 11%; text-align: right; color : blue; ">Số quyết định</td>
                                                 <td colspan="2">
                                                     <input type="text" class="w-200"
                                                         id="SoQuyetDinhID" name="soQuyetDinh" value=""></td>
-                                                <td style="text-align: right; ">Đơn vị ban hàng</td>
+                                                <td style="text-align: right; color : blue; ">Đơn vị ban hàng</td>
                                                 <td colspan="2">
                                                     <input type="text" class="w-200" id="DonViBanHanhID" name="donViBanHanh"
                                                         value=""></td>
 											</tr>
                                             <tr>
-                                                <td style="text-align: right; ">Tỉnh/Thành</td>
+                                                <td style="text-align: right; color : blue; ">Tỉnh/Thành ban hành</td>
                                                 <td colspan="2" style="width:400px">
                                                     <select class="w-200" id="TinhThanhID" name="tinhThanh">
                                                         <option value="0">--- Vui lòng chọn ---</option>
@@ -174,7 +218,7 @@
                                                         <option value="2">Tỉnh Đăk Lăk</option>                                                       
                                                     </select>
                                                 </td>
-                                                <td style="text-align: right; ">Quận/Huyện</td>
+                                                <td style="text-align: right; color : blue; ">Quận/Huyện ban hành</td>
                                                 <td colspan="2" style="width:400px">
                                                     <select class="w-200" id="QuanHuyenID" name="quanHuyen">
                                                         <option value="0">--- Vui lòng chọn ---</option>
@@ -186,7 +230,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="text-align: right; ">Phường/Xã</td>
+                                                <td style="text-align: right; color : blue;">Phường/Xã ban hành</td>
                                                 <td colspan="2">
                                                     <select class="w-200" id="PhuongXaID" name="phuongXa">
                                                         <option value="0">--- Chọn ---</option>
@@ -202,48 +246,80 @@
                                                    </td>
                                             </tr>
 											<tr>
-											<td style="text-align: right; ">Tên quyết định ngặn chặn</td>
+											<td style="text-align: right; color : blue; ">Tên quyết định ngặn chặn</td>
                                                 <td colspan="4">
                                                     <input type="text" class="w-200" id="TenQuyetDinhNganChanID" name="tenQuyetDinhNganChan"
                                                         value=""></td>
 											</tr>
                                             <tr>
-                                                <td style="text-align: right; ">Họ tên chủ sở hữu</td>
+                                                <td style="text-align: right; color : blue;">Họ tên chủ sở hữu</td>
                                                 <td colspan="2">
                                                     <input type="text" class="w-200" id="HoTenChuSoHuuID" name="hoTenChuSoHuu"
                                                         value=""></td>
-                                                <td style="text-align: right; ">CMND</td>
+                                                <td style="text-align: right; color : blue;">Giấy tờ chủ sở hữu</td>
                                                 <td colspan="2">
-												<input type="text" class="w-200" id="CMNDID" name="cMND"
+												<input type="text" class="w-200" id="GiayToChuSoHuuID" name="giayToChuSoHuu"
                                                         value="">
                                                     </td>
                                             </tr>
 											<tr>
-											<td style="text-align: right; ">Địa chỉ thường trú</td>
-                                                <td colspan="4">
-                                                    <input type="text" class="w-200" id="DiaChiThuongTruID" name="diaChiThuongTru"
-                                                        value=""></td>
-											</tr>                                            
+											<td style="text-align: right; ">Tỉnh/Thành phố thường trú</td>
+                                                <td colspan="2">												
+                                                    <select class="w-200" id="TinhThanhPhoThuongTruID" name="tinhThanhPhoThuongTru">
+                                                        <option value="0">--- Chọn ---</option>
+                                                        <option value="1">Thành phố Hà Nội</option>
+                                                        <option value="2">Thành phố Hồ Chí Minh</option>
+                                                        <option value="3">Tỉnh Đăk Lăk</option>
+                                                        <option value="4">Tỉnh Đồng Nai</option>
+                                                    </select></td>
+											<td style="text-align: right; ">Quận/Huyện thường trú</td>
+                                                <td colspan="2">
+                                                    <select class="w-200" id="QuanHuyenThuongTruID" name="quanHuyenThuongTruID">
+                                                        <option value="0">--- Chọn ---</option>
+                                                        <option value="1">Thành phố Buôn Ma Thuột</option>
+                                                        <option value="2">Thị xã Buôn Hồ</option>
+                                                        <option value="3">Huyện Ea H'leo</option>
+                                                        <option value="4">Huyện Ea Súp</option>
+                                                    </select></td>			
+											</tr>   
+											<tr>
+											<td style="text-align: right; ">Phường/Xã thường trú</td>
+                                                <td colspan="2">
+                                                    <select class="w-200" id="QuanHuyenThuongTruID" name="quanHuyenThuongTruID">
+                                                        <option value="0">--- Chọn ---</option>
+                                                        <option value="1">Phường Tân An</option>
+                                                        <option value="2">Phường Tân Lập</option>
+                                                        <option value="3">Phường Thống Nhất</option>
+                                                        <option value="4">Phường tân Hòa</option>
+                                                    </select></td>	
+											</tr>
                                             <tr>
-                                                <td style="text-align: right; ">Loại tài sản</td>
+                                                <td style="text-align: right; color : blue; ">Loại tài sản</td>
                                                 <td colspan="2">
                                                     <select class="w-200" id="LoaiTaiSanID" name="loaiTaiSan">
                                                         <option value="0">--- Chọn ---</option>
-                                                        <option value="1">Nhà</option>
-                                                        <option value="2">Công trình kiến trúc</option>
-                                                        <option value="3">Máy móc</option>
-                                                        <option value="4">Ô tô</option>
+                                                        <option value="Nha">Nhà</option>
+                                                        <option value="Nha">Công trình kiến trúc</option>
+                                                        <option value="MayMoc">Máy móc</option>
+                                                        <option value="OTo">Ô tô</option>
                                                     </select></td>
-													 <td style="text-align: right; ">Giấy CNQSDD</td>
-													 <td colspan="4">
+													 <td id="GiayCNQSDD" style="text-align: right; color : blue; ">Giấy CNQSDD</td>
+													 <td id="SoMay" style="text-align: right; color : blue; ">Số máy</td>
+													 <td id="BienKiemSoat" style="text-align: right; color : blue; ">Biển kiểm soát</td>
+													 <td colspan="2">
                                                     <input type="text" class="w-200"
-                                                        id="GiayCNQSDDID" name="giayCNQSDD" value=""></td>
+                                                        id="GiayCNQSDDID" name="giayCNQSDD" value="">
+														<input type="text" class="w-200"
+                                                        id="SoMayID" name="soMay" value="">
+														<input type="text" class="w-200"
+                                                        id="BienKiemSoatID" name="bienKiemSoat" value="">
+														</td>
 													</tr>																										
                                             <tr>
-                                                <td style="width: 11%; text-align: right; ">Nội dung quyết định</td>
+                                                <td style="width: 11%; text-align: right; color : blue;s ">Nội dung quyết định</td>
                                                 <td colspan="4">
                                                     <input type="text" class="w-200"
-                                                        id="NoiDungQuyetDinhID" name="noiDungQuyetDinh" value=""></td>
+                                                        id="NoiDungQuyetDinhID" style="height: 100px" name="noiDungQuyetDinh" value=""></td>
                                                 
                                             </tr>
 											<tr>
@@ -265,65 +341,31 @@
                                             cellspacing="0">
                                             <tbody>
                                                 <tr style="background-color: White;">
+												<th scope="col"
+                                                        style="color: White; background-color: Green;">STT</th>
                                                     <th scope="col"
                                                         style="color: White; background-color: Green;">Số quyết định</th>
                                                     <th scope="col"
-                                                        style="color: White; background-color: Green;">Tên ngăn chặn</th>
+                                                        style="color: White; background-color: Green;">Đơn vị ban hành</th>
+														<th scope="col"
+                                                        style="color: White; background-color: Green;">Ngày ban hành quyết định</th>
                                                     <th scope="col"
                                                         style="color: White; background-color: Green;">Chủ sở hữu</th>
                                                     <th scope="col"
-                                                        style="color: White; background-color: Green;">Địa chỉ</th>
+                                                        style="color: White; background-color: Green;">Giấy tờ chủ sở hữu</th>
                                                     <th scope="col"
                                                         style="color: White; background-color: Green;">Loại tài sản</th>
                                                     <th scope="col"
-                                                        style="color: White; background-color: Green;">Đơn vị ban hành</th>
+                                                        style="color: White; background-color: Green;">Giấy tờ tài sản</th>                                                                                                        
                                                     <th scope="col"
-                                                        style="color: White; background-color: Green;">Ngày ban hành quyết định</th>
-                                                    <th scope="col"
-                                                        style="color: White; background-color: Green;">Key tài sản</th>
-                                                    <th scope="col"
-                                                        style="color: White; background-color: Green;">Trạng thái</th>                                                    
+                                                        style="color: White; background-color: Green;">Trạng thái</th>                                                 
                                                     <th scope="col"
 														style="color: White; background-color: Green;">&nbsp;</th>
 
                                                 </tr>
 
-                                                <tr>
-                                                    <td style="width: 50px;" align="center">1</td>
-                                                    <td style="width: 50px;">
-                                                        <div style="text-align: left">007</div>
-                                                    </td>
-                                                    <td style="width: 200px;">
-                                                        <div style="text-align: left">
-                                                            Nhà
-													
-                                                        </div>
-                                                    </td>
-                                                    <td style="width: 250px;">
-                                                        <div style="text-align: left">Diên Khánh</div>
-                                                    </td>
-                                                    <td style="width: 250px;">
-                                                        <div style="text-align: left">Chu bá thông</div>
-                                                    </td>
-                                                    <td style="width: 100px;">
-                                                        <div style="text-align: left">Nha</div>
-                                                    </td>
-                                                    <td style="width: 130px;">
-                                                        <div style="text-align: left">08/03/2016</div>
-                                                    </td>
-
-                                                    <td style="width: 150px;">
-                                                        <div style="text-align: left">Đã chuyển</div>
-                                                    </td>
-                                                    <td style="width: 50px;" align="center">
-                                                        <div style="text-align: left">Đã ngăn chặn</div>
-                                                    </td>
-                                                   
-                                                    <td style="width: 50px;" align="center">
-													<input src="images/editIcon.gif"  style="height: 20px; width: 20px; border-width: 0px;"
-														type="image" /> 
-														</td>
-                                                </tr>
+                                               
+												
 												<tr>
                                                     <td style="width: 50px;" align="center">1</td>
                                                     <td style="width: 50px;">
@@ -331,25 +373,25 @@
                                                     </td>
                                                     <td style="width: 200px;">
                                                         <div style="text-align: left">
-                                                            Nhà
+                                                            Tòa án
 													
                                                         </div>
                                                     </td>
                                                     <td style="width: 250px;">
-                                                        <div style="text-align: left">Diên Khánh</div>
+                                                        <div style="text-align: left">20/11/2015</div>
                                                     </td>
                                                     <td style="width: 250px;">
                                                         <div style="text-align: left">Chu bá thông</div>
                                                     </td>
                                                     <td style="width: 100px;">
-                                                        <div style="text-align: left">Nha</div>
+                                                        <div style="text-align: left">012345678</div>
                                                     </td>
                                                     <td style="width: 130px;">
-                                                        <div style="text-align: left">08/03/2016</div>
+                                                        <div style="text-align: left">Đất</div>
                                                     </td>
 
                                                     <td style="width: 150px;">
-                                                        <div style="text-align: left">Đã chuyển</div>
+                                                        <div style="text-align: left">Sổ đỏ 0909</div>
                                                     </td>
                                                     <td style="width: 50px;" align="center">
                                                         <div style="text-align: left">Đã ngăn chặn</div>
@@ -363,29 +405,29 @@
                                                 <tr>
                                                     <td style="width: 50px;" align="center">2</td>
                                                     <td style="width: 50px;">
-                                                        <div style="text-align: left">008 </div>
+                                                        <div style="text-align: left"> 088 </div>
                                                     </td>
                                                     <td style="width: 200px;">
                                                         <div style="text-align: left">
-                                                            Đất
+                                                            UBND Tỉnh
 													
                                                         </div>
                                                     </td>
                                                     <td style="width: 250px;">
-                                                        <div style="text-align: left">Diên Khánh</div>
+                                                        <div style="text-align: left">11/11/2015</div>
                                                     </td>
                                                     <td style="width: 250px;">
                                                         <div style="text-align: left">Lê Văn Luyện</div>
                                                     </td>
                                                     <td style="width: 100px;">
-                                                        <div style="text-align: left">Nha</div>
+                                                        <div style="text-align: left">987654321</div>
                                                     </td>
                                                     <td style="width: 130px;">
-                                                        <div style="text-align: left">08/03/2016</div>
+                                                        <div style="text-align: left">Tàu cá</div>
                                                     </td>
 
                                                     <td style="width: 150px;">
-                                                        <div style="text-align: left">đã chuyển</div>
+                                                        <div style="text-align: left">80QN0909</div>
                                                     </td>
                                                     <td style="width: 50px;" align="center">
                                                        <div style="text-align: left">Đã ngăn chặn</div>

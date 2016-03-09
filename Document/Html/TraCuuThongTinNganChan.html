@@ -50,6 +50,50 @@
 
         });
 </script>
+<script>
+$(document).ready(function()
+{
+ $("#LoaiTaiSanID").change(function()
+ {
+  if($(this).val() == "Nha")
+  {
+   $("#GiayCNQSDD").show();
+   $("#GiayCNQSDDID").show();
+  }
+  else
+  {
+   $("#GiayCNQSDD").hide();
+   $("#GiayCNQSDDID").hide();
+  }
+  if($(this).val() == "MayMoc")
+  {
+   $("#SoMayID").show();
+   $("#SoMay").show();
+  }
+  else
+  {
+   $("#SoMayID").hide();
+   $("#SoMay").hide();
+  }
+  if($(this).val() == "OTo")
+  {
+   $("#BienKiemSoatID").show();
+   $("#BienKiemSoat").show();
+  }
+  else
+  {
+   $("#BienKiemSoatID").hide();
+   $("#BienKiemSoat").hide();
+  }
+ });
+ $("#SoMayID").hide();
+ $("#BienKiemSoatID").hide();
+ $("#BienKiemSoat").hide();
+ $("#SoMay").hide();
+ $("#GiayCNQSDDID").hide();
+ $("#GiayCNQSDD").hide();
+});
+</script>
     <div class="mainContainer">
         <header>
 		<div>
@@ -176,7 +220,7 @@
                                                 <td colspan="2">
                                                     <input type="text" class="w-200" id="DonViBanHanhID" name="donViBanHanh"
                                                         value=""></td>
-                                                <td style="text-align: right; ">Tỉnh/Thành</td>
+                                                <td style="text-align: right; ">Tỉnh/Thành ban hành</td>
                                                 <td colspan="2" style="width:400px">
                                                     <select class="w-200" id="TinhThanhID" name="tinhThanh">
                                                         <option value="0">--- Vui lòng chọn ---</option>
@@ -187,7 +231,7 @@
                                                 
                                             </tr>
                                             <tr>
-											<td style="text-align: right; ">Quận/Huyện</td>
+											<td style="text-align: right; ">Quận/Huyện ban hành</td>
                                                 <td colspan="2" style="width:400px">
                                                     <select class="w-200" id="QuanHuyenID" name="quanHuyen">
                                                         <option value="0">--- Vui lòng chọn ---</option>
@@ -197,7 +241,7 @@
                                                         <option value="4">Huyện Ea Súp</option>
                                                     </select>
                                                 </td>
-                                                <td style="text-align: right; ">Phường/Xã</td>
+                                                <td style="text-align: right; ">Phường/Xã ban hành</td>
                                                 <td colspan="2">
                                                     <select class="w-200" id="PhuongXaID" name="phuongXa">
                                                         <option value="0">--- Chọn ---</option>
@@ -224,7 +268,7 @@
                                                 <td colspan="2">
                                                     <input type="text" class="w-200" id="HoTenChuSoHuuID" name="hoTenChuSoHuu"
                                                         value=""></td>
-                                                <td style="text-align: right; ">CMND</td>
+                                                <td style="text-align: right; ">Giấy tờ chủ sở hữu</td>
                                                 <td colspan="2">
 												<input type="text" class="w-200" id="CMNDID" name="cMND"
                                                         value="">
@@ -237,19 +281,26 @@
                                                         value=""></td>
 											</tr>                                            
                                             <tr>
-                                                <td style="text-align: right; ">Loại tài sản</td>
+                                                <td style="text-align: right; color : blue; ">Loại tài sản</td>
                                                 <td colspan="2">
                                                     <select class="w-200" id="LoaiTaiSanID" name="loaiTaiSan">
                                                         <option value="0">--- Chọn ---</option>
-                                                        <option value="1">Nhà</option>
-                                                        <option value="2">Công trình kiến trúc</option>
-                                                        <option value="3">Máy móc</option>
-                                                        <option value="4">Ô tô</option>
+                                                        <option value="Nha">Nhà</option>
+                                                        <option value="Nha">Công trình kiến trúc</option>
+                                                        <option value="MayMoc">Máy móc</option>
+                                                        <option value="OTo">Ô tô</option>
                                                     </select></td>
-													 <td style="text-align: right; ">Giấy CNQSDD</td>
-													 <td colspan="4">
+													 <td id="GiayCNQSDD" style="text-align: right; color : blue; ">Giấy CNQSDD</td>
+													 <td id="SoMay" style="text-align: right; color : blue; ">Số máy</td>
+													 <td id="BienKiemSoat" style="text-align: right; color : blue; ">Biển kiểm soát</td>
+													 <td colspan="2">
                                                     <input type="text" class="w-200"
-                                                        id="GiayCNQSDDID" name="giayCNQSDD" value=""></td>
+                                                        id="GiayCNQSDDID" name="giayCNQSDD" value="">
+														<input type="text" class="w-200"
+                                                        id="SoMayID" name="soMay" value="">
+														<input type="text" class="w-200"
+                                                        id="BienKiemSoatID" name="bienKiemSoat" value="">
+														</td>
 													</tr>																										
                                             <tr>
                                                 <td style="width: 11%; text-align: right; ">Nội dung quyết định</td>
@@ -287,7 +338,7 @@
                                                     <th scope="col"
                                                         style="color: White; background-color: Green;">Ngày ban hành quyết định</th>
                                                     <th scope="col"
-                                                        style="color: White; background-color: Green;">Key tài sản</th>
+                                                        style="color: White; background-color: Green;">Giấy tờ tài sản</th>
                                                     <th scope="col"
                                                         style="color: White; background-color: Green;">Trạng thái</th>                                                    
                                                     <th scope="col"
