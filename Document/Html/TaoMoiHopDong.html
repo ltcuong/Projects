@@ -1,0 +1,1101 @@
+﻿<!--?xml version="1.0"?-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Style-Type" content="text/css" />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+
+    <title>Phần mềm qhòng công chứng</title>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/general.css" rel="stylesheet" />
+    <link href="css/noise-red.css" rel="stylesheet" />
+    <link href="css/myStyle.css" rel="stylesheet" type="text/css" />
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+
+    <link href="css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="css/main.css" type="text/css" rel="stylesheet" />
+    <link href="css/admin.css" type="text/css" rel="stylesheet" />
+    <link href="css/colorbox.css" type="text/css" rel="stylesheet" />
+
+    <link href="css/jquery.css" type="text/css" rel="stylesheet" />
+
+    <script type="text/javascript" src="js/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.core.js"></script>
+    <script type="text/javascript" src="js/jquery.colorbox.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.datepicker.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.tabs.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.tooltip.js"></script>
+</head>
+<body>
+    <script>
+        function showPopUpDivWithSize(id, width, height) {
+            var divId = "#" + id;
+            $.colorbox({
+                inline: true,
+                href: divId,
+                width: width,
+                height: height,
+                onClosed: function () {
+                }
+            });
+        }
+        $(function () {
+
+        });
+</script>
+<script>
+$(document).ready(function()
+{
+ $("#LoaiHopDongID").change(function()
+ {
+  if($(this).val() == "TheChap")
+  {
+   $("#ChiTietLoaiHDID").show();	   
+  }
+  else
+  {
+   $("#ChiTietLoaiHDID").hide();	   
+  }
+  
+  if($(this).val() == "ChuyenNhuong")
+  {
+   $("#ChiTietLoaiHDCNID").show();
+  }
+  else
+  {
+   $("#ChiTietLoaiHDCNID").hide();
+  }
+  if($(this).val() == "TangCho")
+  {
+   $("#ChiTietLoaiHDTCID").show();
+  }
+  else
+  {
+   $("#ChiTietLoaiHDTCID").hide();
+  }
+  if($(this).val() == "MuaBan")
+  {
+   $("#ChiTietLoaiHDMBID").show();
+  }
+  else
+  {
+   $("#ChiTietLoaiHDMBID").hide();
+  }
+  if($(this).val() == "UyQuyen")
+  {
+   $("#ChiTietLoaiHDYQID").show();
+  }
+  else
+  {
+   $("#ChiTietLoaiHDYQID").hide();
+  }
+  
+ });
+ 
+ $("#ChiTietLoaiHDYQID").hide();
+  $("#ChiTietLoaiHDMBID").hide();
+ $("#ChiTietLoaiHDTCID").hide();
+ $("#ChiTietLoaiHDCNID").hide();
+ $("#ChiTietLoaiHDID").hide();
+});
+
+$(document).ready(function()
+{
+ $("#LoaiDuongSuID").change(function()
+ {
+  if($(this).val() == "CaNhan")
+  {
+   $("#TenDuongSu").show();
+   $("#TenDuongSuID").show();
+   $("#NamSinh").show();
+   $("#NamSinhID").show();
+   $("#LoaiGiayTo").show();
+   $("#LoaiGiayToID").show();
+   $("#SoGiayTo").show();
+   $("#SoGiayToTuyThanID").show();
+   $("#NgayCap").show();
+   $("#NgayCapID").show();
+   $("#NoiCap").show();
+   $("#NoiCapGiayToID").show();
+   $("#TinhThanh").show();
+   $("#TinhThanhID").show();
+   $("#QuanHuyen").show();
+   $("#QuanHuyenID").show();
+   $("#PhuongXa").show();
+   $("#PhuongXaID").show();
+   $("#DiaChiLienHe").show();
+   $("#DiaChiLienHeID").show();
+	$("#SoNha").show();
+   $("#SoNhaDuongPhoID").show();
+   
+  }
+  else
+  {
+   $("#TenDuongSu").hide();
+   $("#TenDuongSuID").hide();
+   $("#NamSinh").hide();
+   $("#NamSinhID").hide();
+   $("#LoaiGiayTo").hide();
+   $("#LoaiGiayToID").hide();
+   $("#SoGiayTo").hide();
+   $("#SoGiayToTuyThanID").hide();
+   $("#NgayCap").hide();
+   $("#NgayCapID").hide();
+   $("#NoiCap").hide();
+   $("#NoiCapGiayToID").hide();
+   $("#TinhThanh").hide();
+   $("#TinhThanhID").hide();
+   $("#QuanHuyen").hide();
+   $("#QuanHuyenID").hide();
+   $("#PhuongXa").hide();
+   $("#PhuongXaID").hide();
+   $("#DiaChiLienHe").hide();
+   $("#DiaChiLienHeID").hide();
+   $("#SoNha").hide();
+   $("#SoNhaDuongPhoID").hide();
+	  
+  } 
+  if($(this).val() == "ToChuc")
+  {
+  
+   $("#TenToChuc").show();
+   $("#TenToChucID").show();
+   $("#SoNhaToChuc").show();
+   $("#SoNhaDuongPhoToChucID").show();
+   $("#TinhthanhToChuc").show();
+   $("#TinhThanhToChucID").show();
+   $("#QuanHuyenToChuc").show();
+   $("#QuanHuyenToChucID").show();
+   $("#PhuongXaToChuc").show();
+   $("#PhuongXaToChucID").show();
+   $("#GiayDKKD").show();
+   $("#GiayPhepDKKDID").show();
+   $("#NgayCapGiay").show();
+   $("#NgayGiayDKKDID").show();
+   $("#NoiCapGiayPhep").show();
+   $("#NoiCapGiayDKKD").show();
+   $("#SoDienThoai").show();
+   $("#SoDienThoaiID").show();
+   $("#NguoiDaiDien").show();
+   $("#NguoiDaiDienID").show();
+	$("#NamSinhNDD").show();
+   $("#NamSinhNDDID").show();
+	$("#LoaiGiayToNDD").show();
+   $("#LoaiGiayToNDDID").show();
+	$("#SoGiayToDaiDien").show();
+   $("#SoGiayToDaiDienID").show();
+	$("#ChucVuDaiDien").show();
+	$("#ChucVuDaiDienID").show();
+   $("#GiayUyQuyen").show();
+	$("#GiayUyQuyenID").show();
+   $("#NgayCapGiayUyQuyen").show();
+	$("#NgayCapGiayUyQuyenID").show();       
+  }
+  else
+  {
+   $("#TenToChuc").hide();
+   $("#TenToChucID").hide();
+   $("#SoNhaToChuc").hide();
+   $("#SoNhaDuongPhoToChucID").hide();
+   $("#TinhthanhToChuc").hide();
+   $("#TinhThanhToChucID").hide();
+   $("#QuanHuyenToChuc").hide();
+   $("#QuanHuyenToChucID").hide();
+   $("#PhuongXaToChuc").hide();
+   $("#PhuongXaToChucID").hide();
+   $("#GiayDKKD").hide();
+   $("#GiayPhepDKKDID").hide();
+   $("#NgayCapGiay").hide();
+   $("#NgayGiayDKKDID").hide();
+   $("#NoiCapGiayPhep").hide();
+   $("#NoiCapGiayDKKD").hide();
+   $("#SoDienThoai").hide();
+   $("#SoDienThoaiID").hide();
+   $("#NguoiDaiDien").hide();
+   $("#NguoiDaiDienID").hide();
+	$("#NamSinhNDD").hide();
+   $("#NamSinhNDDID").hide();
+	$("#LoaiGiayToNDD").hide();
+   $("#LoaiGiayToNDDID").hide();
+	$("#SoGiayToDaiDien").hide();
+   $("#SoGiayToDaiDienID").hide();
+	$("#ChucVuDaiDien").hide();
+	$("#ChucVuDaiDienID").hide();
+   $("#GiayUyQuyen").hide();
+	$("#GiayUyQuyenID").hide();
+   $("#NgayCapGiayUyQuyen").hide();
+	$("#NgayCapGiayUyQuyenID").hide();
+	
+  }
+      
+ });
+	$("#TenDuongSu").hide();
+   $("#TenDuongSuID").hide();
+   $("#NamSinh").hide();
+   $("#NamSinhID").hide();
+   $("#LoaiGiayTo").hide();
+   $("#LoaiGiayToID").hide();
+   $("#SoGiayTo").hide();
+   $("#SoGiayToTuyThanID").hide();
+   $("#NgayCap").hide();
+   $("#NgayCapID").hide();
+   $("#NoiCap").hide();
+   $("#NoiCapGiayToID").hide();
+   $("#TinhThanh").hide();
+   $("#TinhThanhID").hide();
+   $("#QuanHuyen").hide();
+   $("#QuanHuyenID").hide();
+   $("#PhuongXa").hide();
+   $("#PhuongXaID").hide();
+   $("#DiaChiLienHe").hide();
+   $("#DiaChiLienHeID").hide();
+   $("#SoNha").hide();
+   $("#SoNhaDuongPhoID").hide();
+   
+   
+   <!--  -->
+   $("#TenToChuc").hide();
+   $("#TenToChucID").hide();
+   $("#SoNhaToChuc").hide();
+   $("#SoNhaDuongPhoToChucID").hide();
+   $("#TinhthanhToChuc").hide();
+   $("#TinhThanhToChucID").hide();
+   $("#QuanHuyenToChuc").hide();
+   $("#QuanHuyenToChucID").hide();
+   $("#PhuongXaToChuc").hide();
+   $("#PhuongXaToChucID").hide();
+   $("#GiayDKKD").hide();
+   $("#GiayPhepDKKDID").hide();
+   $("#NgayCapGiay").hide();
+   $("#NgayGiayDKKDID").hide();
+   $("#NoiCapGiayPhep").hide();
+   $("#NoiCapGiayDKKD").hide();
+   $("#SoDienThoai").hide();
+   $("#SoDienThoaiID").hide();
+   $("#NguoiDaiDien").hide();
+   $("#NguoiDaiDienID").hide();
+	$("#NamSinhNDD").hide();
+   $("#NamSinhNDDID").hide();
+	$("#LoaiGiayToNDD").hide();
+   $("#LoaiGiayToNDDID").hide();
+	$("#SoGiayToDaiDien").hide();
+   $("#SoGiayToDaiDienID").hide();
+	$("#ChucVuDaiDien").hide();
+	$("#ChucVuDaiDienID").hide();
+   $("#GiayUyQuyen").hide();
+	$("#GiayUyQuyenID").hide();
+   $("#NgayCapGiayUyQuyen").hide();
+	$("#NgayCapGiayUyQuyenID").hide();			
+});
+$(document).ready(function()
+{
+ $("#LoaiDuongSuDSHBenAID").change(function()
+ {
+  if($(this).val() == "CaNhanDSH")
+  {
+   $("#TenDuongSuDSHBenA").show();
+   $("#TenDuongSuDSHBenAID").show();
+   $("#NamSinhDSHBenA").show();
+   $("#NamSinhDSHBenAID").show();
+   $("#LoaiGiayToDSHBenA").show();
+   $("#LoaiGiayToDSHBenAID").show();
+   $("#SoGiayToDSHBenA").show();
+   $("#SoGiayToTuyThanDSHBenAID").show();
+   $("#NgayCapDSHBenA").show();
+   $("#NgayCapDSHBenAID").show();
+   $("#NoiCapDSHBenA").show();
+   $("#NoiCapGiayToDSHBenAID").show();
+   $("#TinhThanhDSHBenA").show();
+   $("#TinhThanhDSHBenAID").show();
+   $("#QuanHuyenDSHBenA").show();
+   $("#QuanHuyenDSHBenAID").show();
+   $("#PhuongXaDSHBenA").show();
+   $("#PhuongXaDSHBenAID").show();
+   $("#DiaChiLienHeDSHBenA").show();
+   $("#DiaChiLienHeDSHBenAID").show();
+	$("#SoNhaDSHBenA").show();
+   $("#SoNhaDuongPhoDSHBenAID").show();
+  }
+  else
+  {
+   $("#TenDuongSuDSHBenA").hide();
+   $("#TenDuongSuDSHBenAID").hide();
+   $("#NamSinhDSHBenA").hide();
+   $("#NamSinhDSHBenAID").hide();
+   $("#LoaiGiayToDSHBenA").hide();
+   $("#LoaiGiayToDSHBenAID").hide();
+   $("#SoGiayToDSHBenA").hide();
+   $("#SoGiayToTuyThanDSHBenAID").hide();
+   $("#NgayCapDSHBenA").hide();
+   $("#NgayCapDSHBenAID").hide();
+   $("#NoiCapDSHBenA").hide();
+   $("#NoiCapGiayToDSHBenAID").hide();
+   $("#TinhThanhDSHBenA").hide();
+   $("#TinhThanhDSHBenAID").hide();
+   $("#QuanHuyenDSHBenA").hide();
+   $("#QuanHuyenDSHBenAID").hide();
+   $("#PhuongXaDSHBenA").hide();
+   $("#PhuongXaDSHBenAID").hide();
+   $("#DiaChiLienHeDSHBenA").hide();
+   $("#DiaChiLienHeDSHBenAID").hide();
+	$("#SoNhaDSHBenA").hide();
+   $("#SoNhaDuongPhoDSHBenAID").hide();
+  }
+  if($(this).val() == "ToChucDSH")
+  {
+   $("#TenToChucDSHBenA").show();
+   $("#TenToChucDSHBenAID").show();
+   $("#SoNhaToChucDSHBenA").show();
+   $("#SoNhaDuongPhoToChucDSHBenAID").show();
+   $("#TinhthanhToChucDSHBenA").show();
+   $("#TinhThanhToChucDSHBenAID").show();
+   $("#QuanHuyenToChucDSHBenA").show();
+   $("#QuanHuyenToChucDSHBenAID").show();
+   $("#PhuongXaToChucDSHBenA").show();
+   $("#PhuongXaToChucDSHBenAID").show();
+   $("#GiayDKKDDSHBenA").show();
+   $("#GiayPhepDKKDDSHBenAID").show();
+   $("#NgayCapGiayDSHBenA").show();
+   $("#NgayGiayDKKDDSHBenAID").show();
+   $("#NoiCapGiayPhepDSHBenA").show();
+   $("#NoiCapGiayDKKDDSHBenAID").show();
+   $("#SoDienThoaiDSHBenA").show();
+   $("#SoDienThoaiDSHBenAID").show();
+   $("#NguoiDaiDienDSHBenA").show();
+   $("#NguoiDaiDienDSHBenAID").show();
+	$("#NamSinhNDDDSHBenA").show();
+   $("#NamSinhNDDDSHBenAID").show();
+	$("#LoaiGiayToNDDDSHBenA").show();
+   $("#LoaiGiayToNDDDSHBenAID").show();
+	$("#SoGiayToDaiDienDSHBenA").show();
+   $("#SoGiayToDaiDienDSHBenAID").show();
+	$("#ChucVuDaiDienDSHBenA").show();
+	$("#ChucVuDaiDienDSHBenAID").show();
+   $("#GiayUyQuyenDSHBenA").show();
+	$("#GiayUyQuyenDSHBenAID").show();
+   $("#NgayCapGiayUyQuyenDSHBenA").show();
+	$("#NgayCapGiayUyQuyenDSHBenAID").show();       
+  }
+  else
+  {
+   $("#TenToChucDSHBenA").hide();
+   $("#TenToChucDSHBenAID").hide();
+   $("#SoNhaToChucDSHBenA").hide();
+   $("#SoNhaDuongPhoToChucDSHBenAID").hide();
+   $("#TinhthanhToChucDSHBenA").hide();
+   $("#TinhThanhToChucDSHBenAID").hide();
+   $("#QuanHuyenToChucDSHBenA").hide();
+   $("#QuanHuyenToChucDSHBenAID").hide();
+   $("#PhuongXaToChucDSHBenA").hide();
+   $("#PhuongXaToChucDSHBenAID").hide();
+   $("#GiayDKKDDSHBenA").hide();
+   $("#GiayPhepDKKDDSHBenAID").hide();
+   $("#NgayCapGiayDSHBenA").hide();
+   $("#NgayGiayDKKDDSHBenAID").hide();
+   $("#NoiCapGiayPhepDSHBenA").hide();
+   $("#NoiCapGiayDKKDDSHBenAID").hide();
+   $("#SoDienThoaiDSHBenA").hide();
+   $("#SoDienThoaiDSHBenAID").hide();
+   $("#NguoiDaiDienDSHBenA").hide();
+   $("#NguoiDaiDienDSHBenAID").hide();
+	$("#NamSinhNDDDSHBenA").hide();
+   $("#NamSinhNDDDSHBenAID").hide();
+	$("#LoaiGiayToNDDDSHBenA").hide();
+   $("#LoaiGiayToNDDDSHBenAID").hide();
+	$("#SoGiayToDaiDienDSHBenA").hide();
+   $("#SoGiayToDaiDienDSHBenAID").hide();
+	$("#ChucVuDaiDienDSHBenA").hide();
+	$("#ChucVuDaiDienDSHBenAID").hide();
+   $("#GiayUyQuyenDSHBenA").hide();
+	$("#GiayUyQuyenDSHBenAID").hide();
+   $("#NgayCapGiayUyQuyenDSHBenA").hide();
+	$("#NgayCapGiayUyQuyenDSHBenAID").hide();
+	
+  }
+  
+ }); 
+ $("#TenDuongSuDSHBenA").hide();
+   $("#TenDuongSuDSHBenAID").hide();
+   $("#NamSinhDSHBenA").hide();
+   $("#NamSinhDSHBenAID").hide();
+   $("#LoaiGiayToDSHBenA").hide();
+   $("#LoaiGiayToDSHBenAID").hide();
+   $("#SoGiayToDSHBenA").hide();
+   $("#SoGiayToTuyThanDSHBenAID").hide();
+   $("#NgayCapDSHBenA").hide();
+   $("#NgayCapDSHBenAID").hide();
+   $("#NoiCapDSHBenA").hide();
+   $("#NoiCapGiayToDSHBenAID").hide();
+   $("#TinhThanhDSHBenA").hide();
+   $("#TinhThanhDSHBenAID").hide();
+   $("#QuanHuyenDSHBenA").hide();
+   $("#QuanHuyenDSHBenAID").hide();
+   $("#PhuongXaDSHBenA").hide();
+   $("#PhuongXaDSHBenAID").hide();
+   $("#DiaChiLienHeDSHBenA").hide();
+   $("#DiaChiLienHeDSHBenAID").hide();
+	$("#SoNhaDSHBenA").hide();
+   $("#SoNhaDuongPhoDSHBenAID").hide();
+   <!--  -->
+   $("#TenToChucDSHBenA").hide();
+   $("#TenToChucDSHBenAID").hide();
+   $("#SoNhaToChucDSHBenA").hide();
+   $("#SoNhaDuongPhoToChucDSHBenAID").hide();
+   $("#TinhthanhToChucDSHBenA").hide();
+   $("#TinhThanhToChucDSHBenAID").hide();
+   $("#QuanHuyenToChucDSHBenA").hide();
+   $("#QuanHuyenToChucDSHBenAID").hide();
+   $("#PhuongXaToChucDSHBenA").hide();
+   $("#PhuongXaToChucDSHBenAID").hide();
+   $("#GiayDKKDDSHBenA").hide();
+   $("#GiayPhepDKKDDSHBenAID").hide();
+   $("#NgayCapGiayDSHBenA").hide();
+   $("#NgayGiayDKKDDSHBenAID").hide();
+   $("#NoiCapGiayPhepDSHBenA").hide();
+   $("#NoiCapGiayDKKDDSHBenAID").hide();
+   $("#SoDienThoaiDSHBenA").hide();
+   $("#SoDienThoaiDSHBenAID").hide();
+   $("#NguoiDaiDienDSHBenA").hide();
+   $("#NguoiDaiDienDSHBenAID").hide();
+	$("#NamSinhNDDDSHBenA").hide();
+   $("#NamSinhNDDDSHBenAID").hide();
+	$("#LoaiGiayToNDDDSHBenA").hide();
+   $("#LoaiGiayToNDDDSHBenAID").hide();
+	$("#SoGiayToDaiDienDSHBenA").hide();
+   $("#SoGiayToDaiDienDSHBenAID").hide();
+	$("#ChucVuDaiDienDSHBenA").hide();
+	$("#ChucVuDaiDienDSHBenAID").hide();
+   $("#GiayUyQuyenDSHBenA").hide();
+	$("#GiayUyQuyenDSHBenAID").hide();
+   $("#NgayCapGiayUyQuyenDSHBenA").hide();
+	$("#NgayCapGiayUyQuyenDSHBenAID").hide();
+});
+</script>
+    <div class="mainContainer">
+        <header>
+		<div>
+			<a href="#" class="logo"> <img src="images/logoca.png"
+				style="height: 85px;"></a>
+		</div>
+		</header>
+        <div style="display: block;" class="widgetBar">
+            <div class="barInner">
+                <div>
+                    <ul class="navigation">
+                        <li><a href="javascript:void(0);" class="active">Quản lý hợp đồng</a>
+                            <ul class="" style="" id="MenuNhomID">
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Tạo mới hợp đồng</a></li>
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Hợp đồng chưa  công chứng</a></li>
+                                <li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Xử lý hợp đồng</a></li>
+								<li><a href="#">&nbsp;&nbsp;&nbsp;&nbsp;- Hợp đồng chưa công chứng</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="content contentRight">
+            <div class="topBar">
+                <div class="topBarInner">
+                    <div id="ctl00_pnKinhDoanh">
+                        <ul class="breadcrumbs">
+                            <li><a href="javascript:void(0)">
+                                <img
+                                    src="images/home5.png"></a></li>
+                            <li><a href="HoSoCaNhan.html">Bổ trợ tư pháp</a></li>
+                        </ul>
+                    </div>
+                    <ul class="profile barButtons">
+                        <li class="profile"><a href="DangNhap.html"
+                            onclick="logoutButton();">Đăng xuất</a></li>
+                    </ul>
+                    <ul class="profile barButtons">
+                        <li class="profile"><a href="#">
+                            <img
+                                src="images/member2.png" alt="">
+                            Chào mừng: <span
+                                id="ctl00_LoginName1" style="font-weight: bold;">Công chứng viên</span>
+                            <span class="arrow"></span><span class="expand"></span></a></li>
+                    </ul>
+
+                </div>
+
+
+
+            </div>
+            <div class="contentInner" id="ContentBodyID">
+                <!--Begin body !-->
+                <div class="col_right">
+                    <div class="box-content">
+                        <div>
+                            <div class="col_right">
+                                <div class="achor_link">
+                                    <img src="images/Home.png" height="16px;" width="16px;">Quản lý hợp đồng<img src="images/Next.png">
+                                    Tạo mới hợp đồng </div>
+                                <div class="box-content">
+                                    <!--Begin table !-->
+                                    <table width="100%" cellspacing="5" cellpadding="5" border="0" class="form">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="6">
+                                                    <p style="color: #e60200;">
+                                                        <strong>Thông tin hợp đồng</strong>
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                           <!--Begin Dong 1 !-->
+                                            <tr>
+                                                <td style="text-align: right; width:15%; color : blue;">Chọn loại hợp đồng</td>
+                                                <td colspan="2" style="width:30%">
+                                                    <select name="loaiHopDong" id="LoaiHopDongID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="TheChap">Thế chấp</option>
+                                                        <option value="ChuyenNhuong">Chuyển nhượng</option>
+                                                        <option value="TangCho">Tặng cho</option>
+														<option value="MuaBan">Mua bán</option>
+														<option value="UyQuyen">Ủy quyền</option>
+												</select>
+                                                </td>
+												</tr>
+												<tr>
+                                                <td style="text-align: right; width:15% ; color : blue; ">Chi tiết loại hợp đồng</td>
+                                                <td colspan="4" style="width:30%">
+                                                   <select name="loaiDuongSu" id="ChiTietLoaiHDID" name="chiTietLoaiHD">												  
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">Thế chấp quyền sử dụng đất và tài sản gắn liền với đất </option>
+                                                        <option value="1">Thế chấp tài sản gắn liền với đất</option>
+                                                        <option value="1">Thế chấp căn hộ chung cư của bên thứ ba</option>
+														<option value="1">Thế chấp căn hộ chung cư</option>
+														<option value="1">Thế chấp quyền sử dụng đât</option>
+														<option value="1">Thế chấp quyền sử dụng đất và tài sản gắn liền với đất bên thứ ba</option>
+														<option value="1">Thế chấp quyền sử dụng đất và tài sản gắn liền với đất hình thanh trong tương lai của bên thứ 3</option>
+														<option value="1">Thế chấp quyền sử dụng đất và tài sản hình thanh trong tương lai mà gắn liền với đất</option>
+														<option value="1">Thế chấp tài sản hình thànhtrong tương lai mà tài sản đó gắn liền với đất</option>
+														<option value="1">Thế chấp tài sản gắn liền với đất hình thanh trong tương lai bên thứ 3</option>														
+												</select>
+												<select  id="ChiTietLoaiHDCNID" name="chiTietLoaiCNHD">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">Chuyển nhượng quyền sử dụng đất </option>
+                                                        <option value="Tổ chức">Chuyển nhượng quyền sử dụng đất và tài sản gắn liền với đất</option>                                                       													
+												</select>
+												
+												<select  id="ChiTietLoaiHDTCID" name="chiTietLoaiTCHD">
+														<option value="0">--- Chọn ---</option>
+														 <option value="TheChap">Tặng cho tài sản</option>
+                                                        <option value="Tổ chức">Tặng cho căn hộ chung cư</option>  
+														<option value="Tổ chức">Tặng cho quyền sử dụng đất</option>
+														<option value="Tổ chức">Tặng cho tài sản gắn liền với đất</option>
+														<option value="Tổ chức">Tặng cho quyền sử dụng đất và tài sản gắn liền với đất</option>
+														<option value="Tổ chức">Tặng cho nhà ở</option>
+												</select>
+												<select  id="ChiTietLoaiHDMBID" name="chiTietLoaiMBHD">
+														<option value="0">--- Chọn ---</option>
+														 <option value="TheChap">Mua bán tài sản</option>
+                                                        <option value="Tổ chức">Mua bán căn hộ nhà chung cư</option>  
+														<option value="Tổ chức">Mua bán tài sản gắn liền với đất</option>														
+												</select>
+												<select  id="ChiTietLoaiHDYQID" name="chiTietLoaiYQHD">
+														<option value="0">--- Chọn ---</option>
+														 <option value="TheChap">Ủy quyền, giấy ủy quyền</option>
+                                                        <option value="Tổ chức">Ủy quyền quản lý nhà</option>  																										
+												</select>
+                                                </td>
+                                            </tr>
+											<tr>
+											<td id="hidden">
+											<input value="Thông tin bên A" class="btn_over" name="LuuBenA" type="button" onclick="showPopUpDivWithSize('Popup01ID', 800, 600); "/>																						
+											</td>
+											</tr>
+											<tr>
+											<td>
+												<input value="Đồng sở hữu bên A" class="btn_over" id="DongSoHuuBenA" type="button" onclick="showPopUpDivWithSize('Popup02ID', 800, 600); "/>
+											</td>
+											</tr>											                                            
+                                        </tbody>
+                                    </table>
+									<div id="ListDanhSachTaiKhoanID">
+
+										<table cellspacing="0" border="0" style="border-collapse: collapse; margin-top: 10px;" id="#" class="table01" rules="all">
+											<tbody>
+												<tr>
+													<td colspan="6" style="color: White; background-color: Green;"><label><strong>Danh sách
+																đồng sở hữu</strong></label></td>
+												</tr>
+											</tbody>
+											<tbody>
+												<tr style="background-color: White;">
+													<th style="color: White; background-color: Green;" scope="col">STT</th>
+													<th style="color: White; background-color: Green;" scope="col">Họ tên</th>
+													<th style="color: White; background-color: Green;" scope="col">Ngày sinh</th>
+													<th style="color: White; background-color: Green;" scope="col">CMND</th>
+													<th style="color: White; background-color: Green;" scope="col">Hộ khẩu</th>
+													<th style="color: White; background-color: Green;" scope="col">&nbsp;</th>
+												</tr>																								
+												
+											
+
+											</tbody>
+										</table>
+									</div>
+							</div>
+						</div>
+					</div>
+
+						</div>
+
+					</section>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+                                    <!--End table !-->
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+               <!--End body !-->
+            </div>
+        </div>
+    </div>
+	<div class="Hidden">
+				<div id="Popup01ID" class="StatusPopup01">
+					<section style="margin-top: 0px;">
+						<div class="contaniner" >
+						<div class="col_right" style="border-style: none; width: 100%; border-color: white;">
+						<div class="box-content">
+							<div class="col_right" style="border-style: none; width: 100%; border-color: white;">
+								<h4 style="margin-bottom: 0px;">Thông tin bên A</h4>
+								<table width="100%" cellspacing="5" cellpadding="0" border="0" class="form">
+									<tbody>
+										<tr>
+										<td style="text-align: right; ">Chọn loại đương sự</td>
+                                                <td colspan="2">
+												<select name="loaiDuongSu" id="LoaiDuongSuID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="CaNhan">Cá nhân</option>
+                                                        <option value="ToChuc">Tổ chức/Ngân hàng</option>                                                        
+												</select>											
+                                                    </td>																																		
+										</tr>
+										<tr>
+                                                <td id="TenDuongSu" style="text-align: right; color : blue; ">Tên đương sự</td>
+                                                <td colspan="2">											
+                                                    <input type="text" class="w-300"  id="TenDuongSuID" name="tenDuongSu"
+                                                        value=""></td>
+                                                <td id="NamSinh" style="text-align: right;">Năm sinh</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300"  id="NamSinhID" name="namSinh"
+                                                        value=""></td>
+                                        </tr>
+										<tr>
+                                                <td id="LoaiGiayTo" style="text-align: right; color : blue; ">Loại giấy tờ</td>
+                                                <td colspan="2">
+												<select name="loaiGiayTo" id="LoaiGiayToID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">CMND</option>
+                                                        <option value="2">Hộ chiếu</option>                                                        
+												</select>
+                                                    </td>
+                                                <td id="SoGiayTo" style="text-align: right; color : blue;">Số giấy tờ</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="SoGiayToTuyThanID" name="soGiayToTuyThan"
+                                                        value=""></td>
+                                            </tr>
+										<tr>
+                                                <td id="NgayCap" style="text-align: right;  ">Ngày cấp</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="NgayCapID" name="ngayCap"
+                                                        value="">
+                                                    </td>
+                                                <td id="NoiCap" style="text-align: right; color : blue;">Nơi cấp</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NoiCapGiayToID" name="noiCapGiayTo"
+                                                        value=""></td>
+                                            </tr>
+										<tr>
+                                                <td id="TinhThanh" style="text-align: right; color : blue; ">Tỉnh/thành thường trú</td>
+                                                <td colspan="2">
+												<select name="tinhThanh" id="TinhThanhID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">tỉnh Đăk Lăk</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="QuanHuyen" style="text-align: right; color : blue;">Quận/Huyện thường trú</td>
+                                                <td colspan="2">
+                                                    <select name="quanHuyen" id="QuanHuyenID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">thành phố Buôn Ma Thuột</option>                                                                                                              
+												</select>
+														</td>
+                                            </tr>
+										<tr>
+                                                <td id="PhuongXa" style="text-align: right; color : blue; ">Phường/Xã thường trú</td>
+                                                <td colspan="2">
+												<select name="phuongXa" id="PhuongXaID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">phường Tân An</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="SoNha" style="text-align: right; color : blue;">Số nhà/Đường phố</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="SoNhaDuongPhoID" name="soNhaDuongPho"
+                                                        value="">
+														</td>
+                                            </tr>
+										<tr>                                                
+                                                <td id="DiaChiLienHe" style="text-align: right; color : blue;">Địa chỉ liên hệ</td>
+                                                <td colspan="4">
+                                                    <input type="text" class="w-700" id="DiaChiLienHeID" name="diaChiLienHe"
+                                                        value="">
+														</td>
+                                            </tr>	
+										<tr>
+                                                <td id="TenToChuc" style="text-align: right; color : blue; ">Tên tổ chức</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="TenToChucID" name="tenToChuc"
+                                                        value="">
+                                                    </td>
+                                                <td id="SoNhaToChuc" style="text-align: right; color : blue;">Số nhà/Đường phố</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="SoNhaDuongPhoToChucID" name="soNhaDuongPho"
+                                                        value="">
+														</td>
+                                            </tr>
+										<tr>
+                                                <td id="TinhthanhToChuc" style="text-align: right; color : blue; ">Tỉnh/thành tổ chức</td>
+                                                <td colspan="2">
+												<select name="tinhThanhToChuc" id="TinhThanhToChucID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">tỉnh Đăk Lăk</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="QuanHuyenToChuc" style="text-align: right; color : blue;">Quận/Huyện tổ chức</td>
+                                                <td colspan="2">
+                                                    <select name="quanHuyenToChuc" id="QuanHuyenToChucID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">thành phố Buôn Ma Thuột</option>                                                                                                            
+												</select>
+														</td>
+                                            </tr>
+										<tr>
+                                                <td id="PhuongXaToChuc" style="text-align: right; color : blue; ">Phường/Xã</td>
+                                                <td colspan="2">
+												<select name="phuongXaToChuc" id="PhuongXaToChucID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">phường Tân An</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="GiayDKKD" style="text-align: right; color : blue;">Giấy phép ĐKKD số</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="GiayPhepDKKDID" name="giayPhepDKKD"
+                                                        value="">
+												</td>
+                                            </tr>
+										<tr>
+                                                <td id="NgayCapGiay" style="text-align: right; color : blue; ">Ngày cấp</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="NgayGiayDKKDID" name="ngayGiayDKKD"
+                                                        value="">
+                                                    </td>
+                                                <td id="NoiCapGiayPhep" style="text-align: right; color : blue;">Nơi cấp</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NoiCapGiayDKKD" name="noiCapGiayDKKD"
+                                                        value="">
+												</td>
+                                            </tr>
+										<tr>
+                                                <td id="SoDienThoai" style="text-align: right; color : blue; ">Số điện thoại</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="SoDienThoaiID" name="soDienThoai"
+                                                        value="">
+                                                    </td>
+                                                <td id="NguoiDaiDien" style="text-align: right; color : blue;">Người đại diện</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NguoiDaiDienID" name="nguoiDaiDien"
+                                                        value="">
+												</td>
+                                            </tr>	
+										<tr>
+                                                <td id="NamSinhNDD" style="text-align: right; color : blue; ">Năm sinh đại diện</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="NamSinhNDDID" name="namSinhNDD"
+                                                        value="">
+                                                    </td>
+                                                <td id="LoaiGiayToNDD" style="text-align: right; color : blue;">Loại giấy tờ đại diện</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="LoaiGiayToNDDID" name="loaiGiayToNDD"
+                                                        value="">
+												</td>
+                                            </tr>
+										<tr>
+                                                <td id="SoGiayToDaiDien" style="text-align: right; color : blue; ">Số giấy tờ đại diện</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="SoGiayToDaiDienID" name="soGiayToDaiDien"
+                                                        value="">
+                                                    </td>
+                                                <td id="ChucVuDaiDien" style="text-align: right; color : blue;">Chức vụ đại diện</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="ChucVuDaiDienID" name="chucVuDaiDien"
+                                                        value="">
+												</td>
+                                            </tr>											
+										<tr>
+                                                <td id="GiayUyQuyen" style="text-align: right; color : blue; ">Theo giấy UQ số</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="GiayUyQuyenID" name="giayUyQuyen"
+                                                        value="">
+                                                    </td>
+                                                <td id="NgayCapGiayUyQuyen" style="text-align: right; color : blue;">Ngày cấp giấy UQ</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NgayCapGiayUyQuyenID" name="ngayCapGiayUyQuyen"
+                                                        value="">
+												</td>
+                                            </tr>	
+										<tr>
+										<td style="text-align: center;"  colspan="6"><input type="button" id="LuuBenA" class="btn_over" value="Lưu bên A"></td>																																												
+										</tr>
+										<input value="Tìm đương sự trong phần mềm" class="btn_over" type="button" onclick="showPopUpDivWithSize('Popup03ID', 800, 600); "/>
+									</tbody>
+								</table>
+								
+							</div>
+						</div>
+					</div>
+
+						</div>
+
+					</section>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+	<div class="Hidden">
+				<div id="Popup02ID" class="StatusPopup01">
+					<section style="margin-top: 0px;">
+						<div class="contaniner" >
+						<div class="col_right" style="border-style: none; width: 100%; border-color: white;">
+						<div class="box-content">
+							<div class="col_right" style="border-style: none; width: 100%; border-color: white;">
+								<h4 style="margin-bottom: 0px;">Thông tin đồng sở hữu bên A</h4>
+								<table width="100%" cellspacing="5" cellpadding="0" border="0" class="form">
+									<tbody>
+										<tr>
+										<td style="text-align: right; ">Chọn loại đương sự</td>
+                                                <td colspan="2">
+												<select name="loaiDuongSuDSHBenA" id="LoaiDuongSuDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="CaNhanDSH">Cá nhân</option>
+                                                        <option value="ToChucDSH">Tổ chức/Ngân hàng</option>                                                        
+												</select>
+                                                    </td>																																
+										</tr>
+										<tr>
+                                                <td id="TenDuongSuDSHBenA" style="text-align: right; color : blue; ">Tên đương sự</td>
+                                                <td colspan="2">											
+                                                    <input type="text" class="w-300"  id="TenDuongSuDSHBenAID" name="tenDuongSuDSHBenA"
+                                                        value=""></td>
+                                                <td id="NamSinhDSHBenA" style="text-align: right;">Năm sinh</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300"  id="NamSinhDSHBenAID" name="namSinhDSHBenA"
+                                                        value=""></td>
+                                        </tr>
+										<tr>
+                                                <td id="LoaiGiayToDSHBenA" style="text-align: right; color : blue; ">Loại giấy tờ</td>
+                                                <td colspan="2">
+												<select name="loaiGiayToDSHBenA" id="LoaiGiayToDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">CMND</option>
+                                                        <option value="2">Hộ chiếu</option>                                                        
+												</select>
+                                                    </td>
+                                                <td id="SoGiayToDSHBenA" style="text-align: right; color : blue;">Số giấy tờ</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="SoGiayToTuyThanDSHBenAID" name="soGiayToTuyThanDSHBenA"
+                                                        value=""></td>
+                                            </tr>
+										<tr>
+                                                <td id="NgayCapDSHBenA" style="text-align: right;  ">Ngày cấp</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="NgayCapDSHBenAID" name="ngayCapDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="NoiCapDSHBenA" style="text-align: right; color : blue;">Nơi cấp</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NoiCapGiayToDSHBenAID" name="noiCapGiayToDSHBenA"
+                                                        value=""></td>
+                                            </tr>
+										<tr>
+                                                <td id="TinhThanhDSHBenA" style="text-align: right; color : blue; ">Tỉnh/thành thường trú</td>
+                                                <td colspan="2">
+												<select name="tinhThanhDSHBenA" id="TinhThanhDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">tỉnh Đăk Lăk</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="QuanHuyenDSHBenA" style="text-align: right; color : blue;">Quận/Huyện thường trú</td>
+                                                <td colspan="2">
+                                                    <select name="quanHuyenDSHBenA" id="QuanHuyenDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">thành phố Buôn Ma Thuột</option>                                                                                                              
+												</select>
+														</td>
+                                            </tr>
+										<tr>
+                                                <td id="PhuongXaDSHBenA" style="text-align: right; color : blue; ">Phường/Xã thường trú</td>
+                                                <td colspan="2">
+												<select name="phuongXaDSHBenA" id="PhuongXaDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">phường Tân An</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="SoNhaDSHBenA" style="text-align: right; color : blue;">Số nhà/Đường phố</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="SoNhaDuongPhoDSHBenAID" name="soNhaDuongPhoDSHBenA"
+                                                        value="">
+														</td>
+                                            </tr>
+										<tr>                                                
+                                                <td id="DiaChiLienHeDSHBenA" style="text-align: right; color : blue;">Địa chỉ liên hệ</td>
+                                                <td colspan="4">
+                                                    <input type="text" class="w-700" id="DiaChiLienHeDSHBenAID" name="diaChiLienHeDSHBenA"
+                                                        value="">
+														</td>
+                                            </tr>	
+										<tr>
+                                                <td id="TenToChucDSHBenA" style="text-align: right; color : blue; ">Tên tổ chức</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="TenToChucDSHBenAID" name="tenToChucDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="SoNhaToChucDSHBenA" style="text-align: right; color : blue;">Số nhà/Đường phố</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="SoNhaDuongPhoToChucDSHBenAID" name="soNhaDuongPhoDSHBenA"
+                                                        value="">
+														</td>
+                                            </tr>
+										<tr>
+                                                <td id="TinhthanhToChucDSHBenA" style="text-align: right; color : blue; ">Tỉnh/thành tổ chức</td>
+                                                <td colspan="2">
+												<select name="tinhThanhToChucDSHBenA" id="TinhThanhToChucDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">tỉnh Đăk Lăk</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="QuanHuyenToChucDSHBenA" style="text-align: right; color : blue;">Quận/Huyện tổ chức</td>
+                                                <td colspan="2">
+                                                    <select name="quanHuyenToChucDSHBenA" id="QuanHuyenToChucDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">thành phố Buôn Ma Thuột</option>                                                                                                            
+												</select>
+														</td>
+                                            </tr>
+										<tr>
+                                                <td id="PhuongXaToChucDSHBenA" style="text-align: right; color : blue; ">Phường/Xã</td>
+                                                <td colspan="2">
+												<select name="phuongXaToChucDSHBenA" id="PhuongXaToChucDSHBenAID">
+														<option value="0">--- Chọn ---</option>
+														 <option value="1">phường Tân An</option>                                                                                                            
+												</select>
+                                                    </td>
+                                                <td id="GiayDKKDDSHBenA" style="text-align: right; color : blue;">Giấy phép ĐKKD số</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="GiayPhepDKKDDSHBenAID" name="giayPhepDKKDDSHBenA"
+                                                        value="">
+												</td>
+                                            </tr>
+										<tr>
+                                                <td id="NgayCapGiayDSHBenA" style="text-align: right; color : blue; ">Ngày cấp</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="NgayGiayDKKDDSHBenAID" name="ngayGiayDKKDDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="NoiCapGiayPhepDSHBenA" style="text-align: right; color : blue;">Nơi cấp</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NoiCapGiayDKKDDSHBenAID" name="noiCapGiayDKKDDSHBenA"
+                                                        value="">
+												</td>
+                                            </tr>
+										<tr>
+                                                <td id="SoDienThoaiDSHBenA" style="text-align: right; color : blue; ">Số điện thoại</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="SoDienThoaiDSHBenAID" name="soDienThoaiDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="NguoiDaiDienDSHBenA" style="text-align: right; color : blue;">Người đại diện</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NguoiDaiDienDSHBenAID" name="nguoiDaiDienDSHBenA"
+                                                        value="">
+												</td>
+                                            </tr>	
+										<tr>
+                                                <td id="NamSinhNDDDSHBenA" style="text-align: right; color : blue; ">Năm sinh đại diện</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="NamSinhNDDDSHBenAID" name="namSinhNDDDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="LoaiGiayToNDDDSHBenA" style="text-align: right; color : blue;">Loại giấy tờ đại diện</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="LoaiGiayToNDDDSHBenAID" name="loaiGiayToNDDDSHBenA"
+                                                        value="">
+												</td>
+                                            </tr>
+										<tr>
+                                                <td id="SoGiayToDaiDienDSHBenA" style="text-align: right; color : blue; ">Số giấy tờ đại diện</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="SoGiayToDaiDienDSHBenAID" name="soGiayToDaiDienDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="ChucVuDaiDienDSHBenA" style="text-align: right; color : blue;">Chức vụ đại diện</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="ChucVuDaiDienDSHBenAID" name="chucVuDaiDienDSHBenA"
+                                                        value="">
+												</td>
+                                            </tr>											
+										<tr>
+                                                <td id="GiayUyQuyenDSHBenA" style="text-align: right; color : blue; ">Theo giấy UQ số</td>
+                                                <td colspan="2">
+												<input type="text" class="w-300" id="GiayUyQuyenDSHBenAID" name="giayUyQuyenDSHBenA"
+                                                        value="">
+                                                    </td>
+                                                <td id="NgayCapGiayUyQuyenDSHBenA" style="text-align: right; color : blue;">Ngày cấp giấy UQ</td>
+                                                <td colspan="2">
+                                                    <input type="text" class="w-300" id="NgayCapGiayUyQuyenDSHBenAID" name="ngayCapGiayUyQuyenDSHBenA"
+                                                        value="">
+												</td>
+                                            </tr>	
+										<tr>
+										<td style="text-align: center;"  colspan="6"><input type="button" id="LuuDSHBenA" class="btn_over" value="Lưu"></td>																																												
+										</tr>
+										<input value="Tìm đương sự trong phần mềm" class="btn_over" type="button" onclick="showPopUpDivWithSize('Popup04ID', 800, 600); "/>
+									</tbody>
+								</table>
+								
+							</div>
+						</div>
+					</div>
+
+						</div>
+
+					</section>
+				</div>
+			</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
