@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TBLFunctions" table="tbl_functions" lazy="true">	
+		<id name="funcID" type="integer" column="funcID">	
+		<generator class="increment"></generator>	
+		</id>	
+		<property name="funcMa" column="FuncMa"/>	
+		<property name="funcTen" column="FuncTen"/>	
+		<property name="locked" column="Locked"/>	
+		<property name="ordinal" column="Ordinal"/>	
+		<property name="module" column="Module"/>
+		
+		<!-- <many-to-one name="userGroup" column="GroupID" class="SystemGroup" insert="false" update="false" /> -->				
+	</class>
+</hibernate-mapping> 

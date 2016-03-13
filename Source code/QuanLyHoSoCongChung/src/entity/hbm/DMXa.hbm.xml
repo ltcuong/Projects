@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="DMXa" table="dm_xa" lazy="true">	
+		<id name="xaID" type="integer" column="XaID">
+			<generator class="increment"></generator>
+		</id>	
+		<property name="xaMa" column="XaMa"/>	
+		<property name="xaTen" column="XaTen"/>	
+		<property name="huyenID" column="HuyenID"/>	
+		<property name="locked" column="Locked"/>	
+		<property name="maBaoCao" column="MaBaoCao"/>
+		<property name="laBenhVien" column="laBenhVien"/>
+		<many-to-one name="huyen" column="HuyenID" class="DMHuyen" insert="false" update="false" />				
+	</class>
+</hibernate-mapping> 

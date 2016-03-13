@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TBLFunctionDetails" table="tbl_functiondetails" lazy="true">	
+		<id name="roleID" type="integer" column="RoleID">	
+			<generator class="increment"></generator>	
+		</id>	
+		<property name="nhomID" column="NhomID"/>	
+		<property name="funcID" column="FuncID"/>	
+		<property name="isView" column="IsView"/>	
+		<property name="isAdd" column="IsAdd"/>	
+		<property name="isDelete" column="IsDelete"/>
+		<property name="isEdit" column="IsEdit"/>		
+		<property name="locked" column="Locked"/>		
+		
+		<many-to-one name="functions" column="FuncID" class="TBLFunctions" insert="false" update="false" />					
+	</class>
+</hibernate-mapping> 

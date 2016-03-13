@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>		
+	<package name="ajaxdanhmuc" extends="struts-default" namespace="/ajaxdanhmuc">
+		<action name="*" class="controller.ajaxdanhmuc.{1}">
+			<result name="success">/views/ajaxdanhmuc/{1}.jsp</result>					
+		</action>	
+		
+		<!-- Tinh BEGIN -->
+		<action name="GetListDanhMucTinh" class="controller.danhmuc.DanhMucTinh" method="executeGetListDanhMucTinh">
+			<result name="success">/views/ajaxdanhmuc/GetListDanhMucTinh.jsp</result>					
+		</action>
+		<action name="UpdateStatusTinh" class="controller.danhmuc.DanhMucTinh" method="executeUpdateStatusTinh">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="DeleteDanhMucTinh" class="controller.danhmuc.DanhMucTinh" method="executeDeleteDanhMucTinh">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="UpdateDanhMucTinh" class="controller.danhmuc.DanhMucTinh" method="executeUpdateDanhMucTinh">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		
+		<action name="CheckExistDanhMucTinhMa" class="controller.danhmuc.DanhMucTinh" method="executeCheckExistDanhMucTinhMa">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="CheckExistDanhMucTinhTen" class="controller.danhmuc.DanhMucTinh" method="executeCheckExistDanhMucTinhTen">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<!-- Tinh - END -->
+		<!-- Huyen BEGIN -->
+		<action name="GetListDanhMucHuyen" class="controller.danhmuc.DanhMucHuyen" method="executeGetListDanhMucHuyen">
+			<result name="success">/views/ajaxdanhmuc/GetListDanhMucHuyen.jsp</result>					
+		</action>
+		<action name="UpdateStatusHuyen" class="controller.danhmuc.DanhMucHuyen" method="executeUpdateStatusHuyen">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="DeleteDanhMucHuyen" class="controller.danhmuc.DanhMucHuyen" method="executeDeleteDanhMucHuyen">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="UpdateDanhMucHuyen" class="controller.danhmuc.DanhMucHuyen" method="executeUpdateDanhMucHuyen">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		
+		<action name="CheckExistDanhMucHuyenMa" class="controller.danhmuc.DanhMucHuyen" method="executeCheckExistDanhMucHuyenMa">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="CheckExistDanhMucHuyenTen" class="controller.danhmuc.DanhMucHuyen" method="executeCheckExistDanhMucHuyenTen">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<!-- Huyen - END -->
+		<!-- Xa BEGIN -->
+		<action name="GetListDanhMucXa" class="controller.danhmuc.DanhMucXa" method="executeGetListDanhMucXa">
+			<result name="success">/views/ajaxdanhmuc/GetListDanhMucXa.jsp</result>					
+		</action>
+		
+		<action name="UpdateStatusXa" class="controller.danhmuc.DanhMucXa" method="executeUpdateStatusXa">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="DeleteDanhMucXa" class="controller.danhmuc.DanhMucXa" method="executeDeleteDanhMucXa">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="UpdateDanhMucXa" class="controller.danhmuc.DanhMucXa" method="executeUpdateDanhMucXa">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		
+		<action name="CheckExistDanhMucXaMa" class="controller.danhmuc.DanhMucXa" method="executeCheckExistDanhMucXaMa">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>
+		<action name="CheckExistDanhMucXaTen" class="controller.danhmuc.DanhMucXa" method="executeCheckExistDanhMucXaTen">
+			<result name="success">/views/ajaxdanhmuc/Data.jsp</result>				
+		</action>		
+		
+		
+		<!-- Xa - END -->
+		<action name="GetSelectHuyenFullDanhMuc" class="controller.ajax.GetSelectHuyenFull">
+			<result name="success">/views/ajaxdanhmuc/GetSelectHuyenFullDanhMuc.jsp</result>				
+		</action>
+		
+	</package>
+
+</struts>

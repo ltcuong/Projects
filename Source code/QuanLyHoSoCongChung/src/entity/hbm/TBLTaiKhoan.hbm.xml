@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TBLTaiKhoan" table="tbl_taikhoan" lazy="true">	
+		<id name="tenDangNhap" column="TenDangNhap" type="string" />	
+		<property name="matKhau" column="MatKhau"/>	
+		<property name="hoTen" column="HoTen"/>
+		<property name="soDienThoai" column="SoDienThoai"/>
+		<property name="email" column="Email"/>
+		<property name="diaChi" column="DiaChi"/>
+		<property name="ngayCapNhat" column="NgayCapNhat"/>
+		<property name="nhomID" column="NhomID"/>	
+		<property name="lastLogin" column="LastLogin"/>
+		<property name="userToken" column="UserToken"/>
+		<property name="lastTokenOnline" column="LastTokenOnline"/>
+		<property name="donViCongTac" column="DonViCongTac"/>
+		<property name="chucVu" column="ChucVu"/>
+		<property name="nguoiTaoTaiKhoan" column="NguoiTaoTaiKhoan"/>
+		<property name="locked" column="Locked"/>
+		<property name="daXoa" column="DaXoa"/>
+		<property name="allXa" column="AllXa"/>
+		<property name="listHuyenQuanLy" column="ListHuyenQuanLy"/>
+		<property name="listXaQuanLy" column="ListXaQuanLy"/>
+		
+		<many-to-one name="nhomTaiKhoan" column="NhomID" class="TBLNhomTaiKhoan" insert="false" update="false" />
+	</class>
+
+</hibernate-mapping> 

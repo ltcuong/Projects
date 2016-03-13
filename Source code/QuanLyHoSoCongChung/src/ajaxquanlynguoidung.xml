@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>		
+	<package name="ajaxquanlynguoidung" extends="struts-default" namespace="/ajaxquanlynguoidung">
+		<action name="*" class="controller.ajaxquanlynguoidung.{1}">
+			<result name="success">/views/ajaxquanlynguoidung/{1}.jsp</result>					
+		</action>	
+		
+		<action name="ThemThongTinCoBanTaiKhoan" class="controller.quanlynguoidung.ThemMoiTaiKhoan" method="executeThemThongTinCoBanTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>				
+		</action>
+		<action name="CapNhatThongTinCoBanTaiKhoan" class="controller.quanlynguoidung.ThemMoiTaiKhoan" method="executeCapNhatThongTinCoBanTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>				
+		</action>
+		<action name="CheckTenTaiKhoanDaTonTai" class="controller.quanlynguoidung.ThemMoiTaiKhoan" method="executeCheckTenTaiKhoanDaTonTai">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>				
+		</action>
+		<action name="CheckTenTaiKhoanDaTonTai" class="controller.quanlynguoidung.ThemMoiTaiKhoan" method="executeCheckTenTaiKhoanDaTonTai">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>				
+		</action>
+		<action name="ThayDoiTinhTrangTaiKhoan" class="controller.quanlynguoidung.ThemMoiTaiKhoan" method="executeThayDoiTinhTrangTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>				
+		</action>
+		<action name="XoaThongTinTaiKhoan" class="controller.quanlynguoidung.ThemMoiTaiKhoan" method="executeXoaThongTinTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>				
+		</action>
+		
+		<action name="GetListDanhSachPhanQuyen" class="controller.quanlynguoidung.PhanQuyenChucNang" method="executeGetListDanhSachPhanQuyen">
+			<result name="success">/views/ajaxquanlynguoidung/GetListDanhSachPhanQuyen.jsp</result>					
+		</action>	
+		<action name="CheckExistsMaNhom" class="controller.quanlynguoidung.QuanLyNhom" method="executeCheckExistsMaNhom">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>	
+		<action name="CheckExistsTenNhom" class="controller.quanlynguoidung.QuanLyNhom" method="executeCheckExistsTenNhom">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		<action name="CapNhatThongTinNhomTaiKhoan" class="controller.quanlynguoidung.QuanLyNhom" method="executeCapNhatThongTinNhomTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		<action name="GetListDanhSachNhom" class="controller.quanlynguoidung.QuanLyNhom" method="executeGetListDanhSachNhom">
+			<result name="success">/views/ajaxquanlynguoidung/GetListDanhSachNhom.jsp</result>					
+		</action>
+		<action name="UpdateStatusNhomTaiKhoan" class="controller.quanlynguoidung.QuanLyNhom" method="executeUpdateStatusNhomTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		<action name="DeleteNhomTaiKhoan" class="controller.quanlynguoidung.QuanLyNhom" method="executeDeleteNhomTaiKhoan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		<action name="ChangeStatusPhanQuyen" class="controller.quanlynguoidung.PhanQuyenChucNang" method="executeChangeStatusPhanQuyen">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		<action name="UpdateStatusPhanQuyen" class="controller.quanlynguoidung.PhanQuyenChucNang" method="executeUpdateStatusPhanQuyen">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		
+		<action name="UpdateThamSoHeThong" class="controller.quanlynguoidung.ThamSoHeThong" method="executeUpdateThamSoHeThong">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		
+		<action name="UpdateHoSoCaNhan" class="controller.quanlynguoidung.HoSoCaNhan" method="executeUpdateHoSoCaNhan">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		
+		<action name="GetSelectNguoiDung" class="controller.quanlynguoidung.NhatKyNguoiDung" method="executeGetSelectNguoiDung">
+			<result name="success">/views/ajaxquanlynguoidung/GetSelectTaiKhoan.jsp</result>					
+		</action>
+		
+		<action name="GetListNhatKySaoLuu" class="controller.quanlynguoidung.SaoLuuDuLieu" method="executeGetListNhatKySaoLuu">
+			<result name="success">/views/ajaxquanlynguoidung/GetListNhatKySaoLuu.jsp</result>					
+		</action>
+		
+		<action name="XoaNhatKySaoLuuDuLieu" class="controller.quanlynguoidung.SaoLuuDuLieu" method="executeXoaNhatKySaoLuuDuLieu">
+			<result name="success">/views/ajaxquanlynguoidung/Data.jsp</result>					
+		</action>
+		
+	</package>
+
+</struts>

@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<property name="connection.useUnicode">true</property>
+		<property name="connection.characterEncoding">UTF-8</property> 
+		<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		
+ 	 	<property name="connection.url">jdbc:mysql://localhost:3306/sotuphapdaklak</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">123456</property>
+    
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</property>
+		<property name="hibernate.cache.use_query_cache">false</property>
+		<property name="hibernate.cache.use_second_level_cache">false</property>
+		<property name="hibernate.cache.use_structured_entries">false</property>
+ 		<property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property> 
+		<property name="hibernate.c3p0.acquire_increment">5</property>
+		<property name="hibernate.c3p0.min_size">10</property> 
+		<property name="hibernate.c3p0.max_size">1000</property>
+		<property name="hibernate.c3p0.initial_pool_size">10</property>		
+		<property name="hibernate.c3p0.max_statements">20</property>
+		<property name="hibernate.c3p0.timeout">500</property>
+		<property name="hibernate.c3p0.max_idle_time">10</property>
+		<property name="hibernate.c3p0.max_statements_per_connection">5</property>
+      	<property name="show_sql">false</property>
+
+		<mapping resource="entity/hbm/TBLFunctionDetails.hbm.xml" />
+		<mapping resource="entity/hbm/TBLFunctions.hbm.xml" />
+		<mapping resource="entity/hbm/TBLLogHeThong.hbm.xml" />
+		<mapping resource="entity/hbm/TBLLogDetail.hbm.xml" />
+		<mapping resource="entity/hbm/TBLNhomTaiKhoan.hbm.xml" />
+		<mapping resource="entity/hbm/TBLTaiKhoan.hbm.xml" />
+		<mapping resource="entity/hbm/TBLThamSoHeThong.hbm.xml" />
+		<mapping resource="entity/hbm/TBLNhatKySaoLuu.hbm.xml" />
+		
+		<mapping resource="entity/hbm/DMHuyen.hbm.xml" />
+		<mapping resource="entity/hbm/DMTinh.hbm.xml" />
+		<mapping resource="entity/hbm/DMXa.hbm.xml" />
+		
+		
+	</session-factory>
+</hibernate-configuration>
