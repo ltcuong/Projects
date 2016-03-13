@@ -1,0 +1,49 @@
+﻿.menucon
+{
+    height: auto !important;
+    margin-left: 40px;
+    background: #EDEDED;
+}
+
+    .menucon table tr td
+    {
+        width: auto !important;
+        font-size: 14px;
+        font-weight: bold;
+    }
+
+        .menucon table tr td img
+        {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+
+.icon
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.myTable
+{
+    border: none !important;
+    width: 100% !important;
+}
+
+    .myTable tr
+    {
+        margin-left: 10px;
+    }
+
+        .myTable tr img
+        {
+            width: 100px !important;
+            height: 100px !important;
+        }
+
+        .myTable tr td
+        {
+            text-align: center;
+            font-weight: bold;
+        }
