@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	
+	 <!--
+	
+	 Begin manager 
+	 	 
+	 -->
+	 <definition name="layoutLoginAdmin" template="/views/layout/admin/themedefault/LayoutLogin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="body" value="" />
+	</definition>
+	 <definition name="LoginAdmin" extends="layoutLoginAdmin">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/LoginAdmin.jsp" />
+	</definition>		
+	<definition name="noneLayout" template="/views/layout/admin/NoneLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="headerpage" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<!-- Layout Quan Ly Nguoi Dung Begin -->
+	<definition name="layoutAdminUserManagerment" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
+		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuUserManagerment.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	<definition name="quanlynguoidung.AdminHome" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/AdminHome.jsp" />		
+	</definition>
+	
+	<definition name="quanlynguoidung.SaoLuuDuLieu" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/SaoLuuDuLieu.jsp" />		
+	</definition>	
+	<definition name="quanlynguoidung.DoiTuongDanhSach" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/DoiTuongDanhSach.jsp" />		
+	</definition>	
+	
+	<definition name="quanlynguoidung.DanhSachTaiKhoan" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/DanhSachTaiKhoan.jsp" />		
+	</definition>	
+	
+	<definition name="quanlynguoidung.HoSoCaNhan" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/HoSoCaNhan.jsp" />		
+	</definition>	
+	
+	<definition name="quanlynguoidung.NhatKyNguoiDung" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/NhatKyNguoiDung.jsp" />		
+	</definition>	
+	
+	<definition name="quanlynguoidung.PhanQuyenChucNang" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/PhanQuyenChucNang.jsp" />		
+	</definition>	
+	
+	<definition name="quanlynguoidung.QuanLyNhom" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/QuanLyNhom.jsp" />		
+	</definition>	
+	<!-- 
+	<definition name="quanlynguoidung.ThamSoHeThong" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/ThamSoHeThong.jsp" />		
+	</definition>	
+	 -->
+	<definition name="quanlynguoidung.ThemMoiTaiKhoan" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/ThemMoiTaiKhoan.jsp" />		
+	</definition>
+	
+	<definition name="quanlynguoidung.ChinhSuaTaiKhoan" extends="layoutAdminUserManagerment">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlynguoidung/ChinhSuaTaiKhoan.jsp" />		
+	</definition>		
+						
+	<!-- Layout Quan Ly Nguoi Dung End -->
+	
+	<!-- Layout Quan Ly Chi Tieu Begin -->
+	<definition name="layoutQuanLyHopDong" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
+		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuQuanLyChiTieu.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<!-- Layout Quan Ly Chi Tieu End -->
+	
+	<!-- Layout Quan Ly Bao Cao Begin -->
+	<definition name="layoutQuanLyBaoCao" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
+		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuQuanLyBaoCao.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	
+	<!-- Layout Quan Ly Bao Cao End -->
+	<!-- Layout Quan Ly Bao Cao Begin -->
+	<definition name="layoutDanhMuc" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
+		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuDanhMuc.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="danhmuc.DanhMucHuyen" extends="layoutDanhMuc">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/danhmuc/DanhMucHuyen.jsp" />		
+	</definition>
+	
+	<definition name="danhmuc.DanhMucDonViTrucThuocTinh" extends="layoutDanhMuc">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/danhmuc/DanhMucDonViTrucThuocTinh.jsp" />		
+	</definition>
+	
+	<definition name="danhmuc.DanhMucXa" extends="layoutDanhMuc">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/danhmuc/DanhMucXa.jsp" />		
+	</definition>
+	
+	<definition name="danhmuc.DanhMucDonViTrucThuocHuyen" extends="layoutDanhMuc">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/danhmuc/DanhMucDonViTrucThuocHuyen.jsp" />		
+	</definition>
+	
+	<definition name="danhmuc.TrangChu" extends="layoutDanhMuc">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/danhmuc/TrangChu.jsp" />		
+	</definition>
+	
+	<!-- Layout Quan Ly Bao Cao End -->
+	
+	<!-- Layout Huong Dan Begin -->
+	<definition name="layoutHuongDan" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
+		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuHuongDan.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="huongdan.HDTrangChu" extends="layoutHuongDan">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/huongdan/HDTrangChu.jsp" />		
+	</definition>
+	
+	<definition name="huongdan.HDTaiFileImport" extends="layoutHuongDan">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/huongdan/HDTaiFileImport.jsp" />		
+	</definition>
+	<!-- Layout Huong Dan End -->
+	
+</tiles-definitions>
