@@ -9,7 +9,13 @@ import util.Const;
 import util.HibernateUtil;
 import authentication.MemberShip;
 import entity.DMHuyen;
+import entity.DMLoaiDuongSu;
+import entity.DMLoaiGiayTo;
+import entity.DMLoaiHopDong;
+import entity.DMLoaiHopDongChiTiet;
+import entity.DMLoaiTaiSan;
 import entity.DMTinh;
+import entity.TEMTuKhoaLoaiTaiSan;
 import entity.DMXa;
 
 public class DanhMucService {
@@ -19,14 +25,186 @@ public class DanhMucService {
 	public static void setUnsecureFunctions(List<String> unsecureFunctions) {
 		DanhMucService.unsecureFunctions = unsecureFunctions;
 	}
-	
-	public int countAllDonViDinh() {
+	public DMLoaiDuongSu getLoaiDuongSuByID(Integer loaiDuongSuID) {
 		Session session;
-		int result = 0;
+		DMLoaiDuongSu result;
 		session = HibernateUtil.getSession();
+		result = null;
 		try {
-			Query query = session .createQuery("select count (*) from DMDonViTinh");
-			result = (Integer) query.list().get(0);
+			Query query = session .createQuery("from DMLoaiDuongSu where loaiDuongSuID=:loaiDuongSuID");
+			query.setInteger("loaiDuongSuID", loaiDuongSuID);
+			result = (DMLoaiDuongSu) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<TEMTuKhoaLoaiTaiSan> getAllListTuKhoaByTempalte(Integer templateID) {
+		Session session;
+		List<TEMTuKhoaLoaiTaiSan> result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMTuKhoaTemplate where templateID=:templateID");
+			query.setInteger("templateID", templateID);
+			result = (List<TEMTuKhoaLoaiTaiSan>) query.list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public String getNameQuocTichByID(Integer quocTichID) {
+		Session session;
+		String result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("select quocTichTen from DMQuocTich where quocTichID=:quocTichID");
+			query.setInteger("quocTichID", quocTichID);
+			result = (String) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	
+	public DMLoaiGiayTo getLoaiGiayToByID(Integer loaiGiayToID) {
+		Session session;
+		DMLoaiGiayTo result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiGiayTo where loaiGiayToID=:loaiGiayToID");
+			query.setInteger("loaiGiayToID", loaiGiayToID);
+			result = (DMLoaiGiayTo) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public String getNameLoaiGiayToByID(Integer loaiGiayToID) {
+		Session session;
+		String result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("select loaiGiayToTen from DMLoaiGiayTo where loaiGiayToID=:loaiGiayToID");
+			query.setInteger("loaiGiayToID", loaiGiayToID);
+			result = (String) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public String getMaTemplateByLoaiTaiSanID(Integer loaiTaiSanID) {
+		Session session;
+		String result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("Select maTemplate from DMLoaiTaiSan where loaiTaiSanID=:loaiTaiSanID");
+			query.setInteger("loaiTaiSanID", loaiTaiSanID);
+			result = (String) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public DMLoaiTaiSan getAllLoaiTaiSanByID(Integer loaiTaiSanID) {
+		Session session;
+		DMLoaiTaiSan result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiTaiSan where loaiTaiSanID=:loaiTaiSanID");
+			query.setInteger("loaiTaiSanID", loaiTaiSanID);
+			result = (DMLoaiTaiSan) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<DMLoaiTaiSan> getAllLoaiTaiSanByLoaiHopDongID(Integer loaiHopDongChiTietID) {
+		Session session;
+		List<DMLoaiTaiSan> result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiTaiSan where loaiTaiSanID in (select loaiTaiSanID from DMLoaiTaiSanLoaiHopDong where loaiHopDongChiTietID=:loaiHopDongChiTietID)");
+			query.setInteger("loaiHopDongChiTietID", loaiHopDongChiTietID);
+			result = (List<DMLoaiTaiSan>) query.list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	
+	@SuppressWarnings("unchecked")
+	public List<DMLoaiGiayTo> getAllLoaiGiayTo(int locked) {
+		Session session;
+		List<DMLoaiGiayTo> result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiGiayTo where locked=:locked");
+			query.setInteger("locked", locked);
+			result = (List<DMLoaiGiayTo>) query.list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<DMLoaiHopDongChiTiet> getAllLoaiHopDongChiTietByLoaiHopDongID(Integer loaiHopDongID) {
+		Session session;
+		List<DMLoaiHopDongChiTiet> result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiHopDongChiTiet where loaiHopDongID=:loaiHopDongID");
+			query.setInteger("loaiHopDongID", loaiHopDongID);
+			result = (List<DMLoaiHopDongChiTiet>) query.list();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	public DMLoaiHopDongChiTiet getLoaiHopDongChiTietByID(Integer loaiHopDongChiTietID) {
+		Session session;
+		DMLoaiHopDongChiTiet result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiHopDongChiTiet where loaiHopDongChiTietID=:loaiHopDongChiTietID");
+			query.setInteger("loaiHopDongChiTietID", loaiHopDongChiTietID);
+			result = (DMLoaiHopDongChiTiet) query.uniqueResult();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	@SuppressWarnings("unchecked")
+	public List<DMLoaiHopDong> getAllLoaiHopDong(MemberShip memberShip) {
+		Session session;
+		List<DMLoaiHopDong> result;
+		session = HibernateUtil.getSession();
+		result = null;
+		try {
+			Query query = session .createQuery("from DMLoaiHopDong");
+			result = (List<DMLoaiHopDong>) query.list();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -445,17 +623,15 @@ public class DanhMucService {
 	}
 	
 	@SuppressWarnings("unchecked")
-	public List<DMHuyen> getAllHuyenByTinhMaSo(Integer tinhID) {
+	public List<DMHuyen> getAllHuyenByTinhID(Integer tinhID, int locked) {
 		Session session;
 		List<DMHuyen> result;
 		session = HibernateUtil.getSession();
 		result = null;
-		String filter = "";
-		if (tinhID != null && tinhID != 0) {
-			filter += " WHERE tinhID = " + tinhID;
-		}
 		try {
-			Query query = session .createQuery("from DMHuyen" + filter);			
+			Query query = session .createQuery("from DMHuyen where tinhID=:tinhID and locked=:locked order by huyenTen asc");			
+			query.setInteger("tinhID", tinhID);
+			query.setInteger("locked", locked);
 			result = (List<DMHuyen>) query.list();
 		} catch (Exception e) {
 			e.printStackTrace();

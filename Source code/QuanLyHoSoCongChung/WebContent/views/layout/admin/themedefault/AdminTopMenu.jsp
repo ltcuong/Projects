@@ -14,7 +14,7 @@
 			<li><a href="../quanlynguoidung/AdminHome" <s:if test="mainAction == 'QuanLyNguoiDung'">class="ActiveTopMenu"</s:if>>Quản lý người dùng</a></li>
 			</s:if>
 			<s:if test="#link2 != false">
-			<li><a href="../quanlychitieu/CTTrangChu "  <s:if test="mainAction == 'ChiTieu'">class="ActiveTopMenu"</s:if>>Quản lý chỉ tiêu thống kê</a></li>
+			<li><a href="../quanlyhopdong/HDTrangChu"  <s:if test="mainAction == 'ChiTieu'">class="ActiveTopMenu"</s:if>>Quản lý hợp đồng công chứng</a></li>
 			</s:if>
 			<s:if test="#link3 != false">
 			<li><a href="../quanlybaocao/BCTrangChu" <s:if test="mainAction == 'BaoCao'">class="ActiveTopMenu"</s:if>>Báo cáo thống kê </a></li>

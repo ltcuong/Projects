@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="DMLoaiGiayTo" table="dm_loaigiayto" lazy="true">	
+		<id name="loaiGiayToID" type="integer" column="LoaiGiayToID">
+			<generator class="increment"></generator>
+		</id>			
+		<property name="loaiGiayToTen" column="LoaiGiayToTen"/>	
+		<property name="locked" column="Locked"/>		
+		
+	</class>
+
+</hibernate-mapping> 

@@ -1,0 +1,15 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="DMLoaiDuongSuTraPhi" table="dm_loaiduongsutraphi" lazy="true">	
+		<id name="loaiDuongSuTraPhiID" type="integer" column="LoaiDuongSuTraPhiID">
+			<generator class="increment"></generator>
+		</id>	
+		<property name="loaiDuongSuTraPhiTen" column="LoaiDuongSuTraPhiTen"/>
+		<property name="benDoiLapID" column="BenDoiLapID"/>	
+		<property name="locked" column="Locked"/>	
+		
+		<many-to-one name="benDoiLap" column="BenDoiLapID" class="DMLoaiDuongSu" insert="false" update="false" />
+	</class>
+</hibernate-mapping> 

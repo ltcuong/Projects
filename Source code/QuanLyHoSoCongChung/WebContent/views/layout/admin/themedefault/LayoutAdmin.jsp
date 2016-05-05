@@ -71,13 +71,15 @@
 		<input type="hidden" value="Bạn có muốn xoá thông tin?" id="MsgError05"/>
 		<input type="hidden" value="Xin vui lòng chọn tài khoản để cấp quyền." id="MsgError06"/>
 		<input type="hidden" value="Mật khẩu không trùng khớp." id="MsgError07"/>
-		
+		<input type="hidden" value="Diện tích phải nhỏ hơn diện tích tổng." id="MsgError08"/>
+		<input type="hidden" value="Xin vui lòng nhập thông tin hợp đồng soạn sẵn." id="MsgError09"/>
 		
 		<input type="hidden" value="Cập nhật thông tin thành công!" id="MsgCapNhatThanhCongID"/>
 		<input type="hidden" value="Cập nhật thông tin thất bại. Xin vui lòng thử lại." id="MsgCapNhatThatBaiID"/>
 		<input type="hidden" value="Xoá thông tin thành công!" id="MsgXoaThanhCongID"/>
 		<input type="hidden" value="Thông tin đang được sử dụng. Không thể xoá." id="MsgXoaThatBaiID"/>
 		<input type="hidden" value="Kích thước tệp tin không đước quá 5MB." id="MsgKichThuocLonID"/>
+		<input type="hidden" value="Bạn có muốn hoàn thành hồ sơ?" id="MsgConfirmHoanThanhID"/>
 	</div>
 	
 </body>

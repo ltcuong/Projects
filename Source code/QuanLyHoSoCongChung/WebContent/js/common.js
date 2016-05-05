@@ -22,37 +22,6 @@ function getXaByHuyenMemberShip() {
 }
 
 
-// Get Select Loai Chi Tieu
-function getSelectLoaiChiTieuCreate() {
-	var result = false;
-	$.ajax({
-		type : "POST",
-		url : "../ajaxchitieu/GetSelectLoaiChiTieuCreate",
-		async : false,
-		data : ({
-		}),
-		success : function(data) {
-			$("#LoaiChiTieuID").html(data);
-		}
-	});
-	return result;
-}
-
-function getSelectLoaiChiTieu() {
-	var result = false;
-	$.ajax({
-		type : "POST",
-		url : "../ajaxchitieu/GetSelectLoaiChiTieu",
-		async : false,
-		data : ({
-		}),
-		success : function(data) {
-			$("#LoaiChiTieuID").html(data);
-		}
-	});
-	return result;
-}
-
 function getSelectNhomTaiKhoan() {
 	var result = false;
 	$.ajax({
@@ -274,6 +243,11 @@ function checkFileSize(inputFile) {
         alert($("#MsgKichThuocLonID").val()); // Do your thing to handle the error.
         inputFile.value = null; // Clear the field.
     }
+}
+
+function insertAtCaret(areaId,text) {
+    var noiDungEditor = FCKeditorAPI.GetInstance(areaId);
+    noiDungEditor.InsertHtml(text);
 }
 
 String.prototype.format = function() {

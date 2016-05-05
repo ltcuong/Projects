@@ -3,6 +3,7 @@ package controller.ajax;
 import java.util.List;
 
 import service.DanhMucService;
+import util.Const;
 import controller.BaseAction;
 import entity.DMHuyen;
 
@@ -14,15 +15,15 @@ public class GetSelectHuyenFull extends BaseAction {
 	private static final long serialVersionUID = 1L;
 
 	private List<DMHuyen> listHuyen;
-	private Integer tinh_maso;
+	private Integer tinhID;
 	
 	public String execute() {
 		
 		try {
 			memberShip = super.getMemberShip();
 			DanhMucService danhMucSV = new DanhMucService();
-			if (tinh_maso != null && tinh_maso.intValue() != 0) {
-				listHuyen = danhMucSV.getAllHuyenByTinhMaSo(tinh_maso);	
+			if (tinhID != null) {
+				listHuyen = danhMucSV.getAllHuyenByTinhID(tinhID, Const.UNLOCKED);	
 			}
 			
 		} catch (Exception e) {
@@ -42,12 +43,12 @@ public class GetSelectHuyenFull extends BaseAction {
 		this.listHuyen = listHuyen;
 	}
 
-	public Integer getTinh_maso() {
-		return tinh_maso;
+	public Integer getTinhID() {
+		return tinhID;
 	}
 
-	public void setTinh_maso(Integer tinh_maso) {
-		this.tinh_maso = tinh_maso;
+	public void setTinhID(Integer tinhID) {
+		this.tinhID = tinhID;
 	}
 	
 }

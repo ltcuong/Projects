@@ -12,14 +12,14 @@
 					<div class="row">
 						<div class="label" style="text-align: right; padding-right: 3px;">Tên đăng nhập</div>
 						<div class="input">
-							<input style="border:1px solid #ccc" id="TaiKhoanUserID" type="text" name="taikhoan_dangnhap" value="" autocomplete="off" />
+							<input style="border:1px solid #ccc" id="TaiKhoanUserID" type="text" name="taikhoan_dangnhap" value="admin" autocomplete="off" />
 						</div>
 					</div>
 				</li>
 				<li><div class="row">
 						<div class="label" style="text-align: right; padding-right: 3px;">Mật khẩu</div>
 						<div class="input">
-							<input style="border:1px solid #ccc" id="TaiKhoanMatKhauID" type="password" name="taikhoan_matkhau" value="" autocomplete="off" onkeypress="loginAdmin(event)"/>
+							<input style="border:1px solid #ccc" id="TaiKhoanMatKhauID" type="password" name="taikhoan_matkhau" value="123456" autocomplete="off" onkeypress="loginAdmin(event)"/>
 						</div>
 					</div></li>
 				<li>

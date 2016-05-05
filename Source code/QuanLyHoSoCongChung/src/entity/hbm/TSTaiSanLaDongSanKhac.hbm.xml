@@ -1,0 +1,19 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TSTaiSanLaDongSanKhac" table="ts_taisanladongsankhac" lazy="true">	
+		<id name="taiSanLaDongSanKhacID" type="integer">
+            <column name="TaiSanLaDongSanKhacID" />
+            <generator class="foreign">
+                <param name="property">taiSan</param>
+            </generator>
+        </id>
+        <one-to-one name="taiSan" class="TSTaiSan" constrained="true" />
+        
+        
+		<property name="dacDiemTaiSan" column="DacDiemTaiSan"/>	
+						
+																			
+	</class>
+</hibernate-mapping> 

@@ -1,0 +1,18 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity">
+	<class name="TEMTemplateDuongSu" table="tem_templateduongsu" lazy="true">	
+		<id name="templateDuongSuID" column="TemplateDuongSuID"/>
+			
+		<property name="maTemplateDuongSu" column="MaTemplateDuongSu"/>
+		<property name="tenTemplateDuongSu" column="TenTemplateDuongSu"/>		
+		<property name="noiDungTemplateDuongSu" column="NoiDungTemplateDuongSu"/>	
+		<property name="loaiDuongSuID" column="LoaiDuongSuID"/>	
+		
+		
+		<many-to-one name="loaiDuongSu" column="LoaiDuongSuID" class="DMLoaiDuongSu" insert="false" update="false" />				
+	</class>
+
+</hibernate-mapping> 

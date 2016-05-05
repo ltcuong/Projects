@@ -13,17 +13,10 @@ public class DMHuyen implements Serializable{
 	private Integer tinhID;
 	private int locked;
 	private String maBaoCao;
-	private Integer laBenhVien;
 	
 	private DMTinh tinh;
 	
 	
-	public Integer getLaBenhVien() {
-		return laBenhVien;
-	}
-	public void setLaBenhVien(Integer laBenhVien) {
-		this.laBenhVien = laBenhVien;
-	}
 	public String getMaBaoCao() {
 		return maBaoCao;
 	}

@@ -14,16 +14,9 @@ public class DMXa implements Serializable{
 	private Integer huyenID;
 	private DMHuyen huyen;
 	private String maBaoCao;
-	private Integer laBenhVien;;
 	private int locked;
 	
 	
-	public Integer getLaBenhVien() {
-		return laBenhVien;
-	}
-	public void setLaBenhVien(Integer laBenhVien) {
-		this.laBenhVien = laBenhVien;
-	}
 	public String getMaBaoCao() {
 		return maBaoCao;
 	}

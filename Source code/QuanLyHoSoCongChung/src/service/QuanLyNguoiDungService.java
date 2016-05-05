@@ -63,9 +63,6 @@ public class QuanLyNguoiDungService {
 					if (huyenArr.length == 1) {
 						Integer huyenID = Integer.parseInt(huyenArr[0]);
 						DMHuyen huyenQuanLy = danhMucSV.getHuyenByMaso(huyenID);
-						if (huyenQuanLy.getLaBenhVien().intValue() == 1) {
-							taiKhoanBenhVienThuocTinh = 1;
-						}
 						listHuyenQuanLy.add(huyenID);
 					} else {
 						for (int i = 0; i < huyenArr.length; i++) {
@@ -84,9 +81,6 @@ public class QuanLyNguoiDungService {
 						if (!xaArr[i].trim().isEmpty()) {
 							Integer xaID = Integer.parseInt(xaArr[i]);
 							DMXa xaQuanLy = danhMucSV.getXaByMaso(xaID);
-							if (xaQuanLy.getLaBenhVien().intValue() == 1) {
-								laTaiKhoanBenhVienThuocHuyen = 1;
-							}
 							listXaQuanLy.add(xaID);
 						}
 					}

@@ -102,9 +102,7 @@
 }
 
 .StatusPopup {
-	/*border: 1px solid #01b863;*/
 	overflow: hidden;
-	width: 350px;
 	height: auto;
 	text-align: center;
 	padding-bottom: 20px;
@@ -120,37 +118,6 @@
 	text-align: left;
 }
 
-.StatusPopup01 {
-	overflow: hidden;
-	width: auto;
-	height: auto;
-	text-align: center;
-	padding-bottom: 20px;
-}
-
-.StatusPopup01 h4 {
-	background: #01b863;
-	color: #FFF;
-	font-size: 1.2em;
-	padding: 5px 0 5px 12px;
-	text-transform: uppercase;
-	margin-bottom: 23px;
-	text-align: left;
-}
-
-
-#PopupThemNhanKhauID {
-    padding-bottom: 0;
-     width: 100%;
-}
-#PopupTamVangID {
-    width: 796px;
-    padding-bottom: 0;
-}
-#PopupXacMinhNhanKhauID{
-	width: 100%;
-    padding-bottom: 0;
-}
 #LabelHeaderWeb {
 	 color: white;
     font-size: 19px;
@@ -161,46 +128,6 @@
     top: 37px;
 }
 
-/* #UploadForm {
-	display: block;
-	margin: 20px auto;
-	background: #eee;
-	border-radius: 10px;
-	padding: 15px
-}
-
-#progressbox {
-	position: relative;
-	width: 400px;
-	border: 1px solid #ddd;
-	padding: 1px;
-	border-radius: 3px;
-}
-
-#progressbar {
-	background-color: lightblue;
-	width: 0%;
-	height: 20px;
-	border-radius: 4px;
-}
-
-#percent {
-	position: absolute;
-	display: inline-block;
-	top: 3px;
-	left: 48%;
-} */
-
-#PopupHoanThanhID select {
-	font-family: Times New Roman,Arial,sans-serif;
-    font-size: 14px;
-    width: 200px;
-}
-
-#PopupHoanThanhID textarea {
-	font-family: Times New Roman,Arial,sans-serif;
-    font-size: 14px;
-}
 
 #MenuNhomID li {
 	height: 25px;
@@ -235,44 +162,4 @@
     box-shadow: 0 1px 0 0 #fff inset;
     min-height: 40px;
     font-weight: bold;
-}
-
-#PopupGiayChungNhanDangKyID{
-	width: auto;
-	padding-bottom: 0;
-}
-#PopupGiayChungNhanDangKyID h4{
-	width: auto;
-	margin-bottom: 0px;
-}
-#PopupThongTinCongTyID{
-	width: 100%;
-}
-
-#TablePhieuHenID {
-	padding:  0 20px 0 20px;
-}
-
-#TablePhieuHenID .TRStyle01{
-	font-size: 12px;
-    line-height: 10px;
-}
-#TablePhieuHenID .Title01{
-	font-size: 20px;
-	padding: 10px 0;
-}
-#TablePhieuHenID .Title01 td{
-	padding: 10px 0 0 0;
-}
-#TablePhieuHenID .Footer01 {
-	 line-height: 10px;
-}
-#FamePhieuHenID {
-	height: 460px;
-}
-#TableMatSauID {
-	width: 100%;
-}
-#TableMatTruocID tr{
-	height: 22px;
 }

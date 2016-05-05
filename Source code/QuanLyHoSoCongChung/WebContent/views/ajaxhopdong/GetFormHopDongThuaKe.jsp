@@ -1,0 +1,88 @@
+<%@ page contentType="text/html; charset=UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<%@ taglib uri="http://java.fckeditor.net" prefix="FCK"%>
+
+<s:if test="laHopDongSoanSan == 0">
+<form id="FormHopDongThuaKeID" method="get" action="" autocomplete="off">
+<fieldset>
+<table width="100%" cellspacing="5" cellpadding="5" border="0"
+	class="form">
+	<tbody>
+		<tr>
+			<td colspan="6">
+				<p style="color: #e60200;">
+					<strong>Thông tin hợp đồng thừa kế</strong>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: right; width: 15%; color: blue;">Giấy tờ căn cứ để thừa kế</td>
+			<td style="width: 30%" colspan="2"><input type="text" name="giayToCanCuDeThuaKe" value="" id="GiayToCanCuDeThuaKeID" class="w-200" maxlength="200" required /></td>
+			<td style="text-align: right; width: 15%;  color: blue;">Ngày chết</td>
+			<td style="width: 30%" colspan="2"><input type="text" name="ngayChet" value="" id="NgayChetID" class="w-200" maxlength="10" required /></td>
+		</tr>
+		<tr>
+			<td style="text-align: right; color: blue;">Giấy chứng tử số</td>
+			<td colspan="2"><input type="text" name="giayChungTuSo" value="" id="GiayChungTuSoID" class="w-200" maxlength="50" required /></td>
+			<td style="text-align: right; color: blue">Ngày cấp giấy chứng tử</td>
+			<td colspan="2"><input type="text" name="ngayCapGiayChungTu" value="" id="NgayCapGiayChungTuID" class="w-200" maxlength="10" required /></td>
+		</tr>
+		<tr>
+			<td style="text-align: right; color: blue;">Nơi cấp giấy chứng tử</td>
+			<td colspan="5"><input type="text" name="noiCapGiayChungTu" value="" id="NoiCapGiayChungTuID" class="w-200" maxlength="200" required/></td>
+		</tr>
+		<tr>
+			<td style="text-align: right;">Bên đi đăng ký</td>
+			<td colspan="2"><select name="benDiDangKy" id="BenDiDangKyID" class="w-200">
+					<option value="0">--- Vui lòng chọn ---</option>
+					<option value="1">Bên A</option>
+					<option value="2">Bên B</option>
+					<option value="3">Bên A và Bên B</option>
+			</select></td>
+			<td style="text-align: right;">Bên chịu phí</td>
+			<td colspan="2"><select name="benChiuPhi" id="BenChiuPhiID" class="w-200">
+					<option value="0">--- Vui lòng chọn ---</option>
+					<option value="1">Bên A</option>
+					<option value="2">Bên B</option>
+					<option value="3">Bên A và Bên B</option>
+			</select></td>
+		</tr>
+		<tr>
+			<td style="text-align: right; vertical-align: top;">Nội dung</td>
+			<td colspan="5">
+			<div id="NoiDungTabID">
+			<FCK:editor instanceName="noiDungEditor" inputName="noiDungContent" height="300">
+			</FCK:editor>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</fieldset>
+</form>
+</s:if><s:else>
+<form id="FormHopDongSoanSanID" method="get" action="" autocomplete="off">
+<fieldset>
+<table width="100%" cellspacing="5" cellpadding="5" border="0"
+	class="form">
+	<tbody>
+		<tr>
+			<td colspan="6">
+				<p style="color: #e60200;">
+					<strong>Thông tin hợp đồng thừa kế</strong>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td style="text-align: right; width: 15%; color: blue;">Nội dung soạn sẵn</td>
+			<td style="width: 30%"><div id="NoiDungSoanSanTabID">
+			<FCK:editor instanceName="noiDungSoanSanEditor" inputName="noiDungSoanSanContent" height="500">
+			</FCK:editor>
+			</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
+</fieldset>
+</form>
+</s:else>

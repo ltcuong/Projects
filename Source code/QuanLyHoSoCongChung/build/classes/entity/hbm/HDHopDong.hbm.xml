@@ -1,0 +1,43 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="HDHopDong" table="hd_hopdong" lazy="true">	
+		<id name="hopDongID" type="integer" column="HopDongID">
+			<generator class="native"></generator>
+		</id>			
+		<property name="loaiHopDongID" column="LoaiHopDongID"/>	
+		<property name="loaiHopDongChiTietID" column="LoaiHopDongChiTietID"/>	
+		
+		<property name="benDangKyID" column="BenDangKyID"/>	
+		<property name="benChiuPhiID" column="BenChiuPhiID"/>	
+		<property name="nguoiTaoHopDong" column="NguoiTaoHopDong"/>	
+		<property name="ngayTaoHopDong" column="NgayTaoHopDong"/>	
+		<property name="phiGiaoDich" column="PhiGiaoDich"/>	
+		<property name="tinhTrangID" column="TinhTrangID"/>
+		<property name="laHopDongSoanSan" column="LaHopDongSoanSan"/>	
+		<property name="noiDungSoanSan" column="NoiDungSoanSan"/>	
+		
+		
+		
+		<one-to-one name="hopDongTheChap" class="HDTheChap" cascade="save-update" />
+		<one-to-one name="hopDongChuyenNhuong" class="HDChuyenNhuong" cascade="save-update" />
+		<one-to-one name="hopDongTangCho" class="HDTangCho" cascade="save-update" />
+		<one-to-one name="hopDongMuaBan" class="HDMuaBan" cascade="save-update" />
+		<one-to-one name="hopDongUyQuyen" class="HDUyQuyen" cascade="save-update" />
+		<one-to-one name="hopDongThuaKe" class="HDThuaKe" cascade="save-update" />
+		<one-to-one name="hopDongThue" class="HDThue" cascade="save-update" />
+		<one-to-one name="hopDongGopVon" class="HDGopVon" cascade="save-update" />
+		<one-to-one name="hopDongCamCo" class="HDCamCo" cascade="save-update" />
+		<one-to-one name="hopDongDiChuc" class="HDDiChuc" cascade="save-update" />
+		<one-to-one name="hopDongChuyenDoi" class="HDChuyenDoi" cascade="save-update" />
+		<one-to-one name="hopDongHuy" class="HDHuy" cascade="save-update" />
+		<many-to-one name="loaiHopDong" column="LoaiHopDongID" class="DMLoaiHopDong" insert="false" update="false" />
+		<many-to-one name="loaiHopDongChiTiet" column="LoaiHopDongChiTietID" class="DMLoaiHopDongChiTiet" insert="false" update="false" />
+		<many-to-one name="benDangKy" column="BenDangKyID" class="DMLoaiDuongSu" insert="false" update="false" />	
+		<many-to-one name="benChiuPhi" column="BenChiuPhiID" class="DMLoaiDuongSu" insert="false" update="false" />	
+		<many-to-one name="tinhTrang" column="TinhTrangID" class="DMTinhTrang" insert="false" update="false" />	
+	
+	</class>
+
+</hibernate-mapping> 

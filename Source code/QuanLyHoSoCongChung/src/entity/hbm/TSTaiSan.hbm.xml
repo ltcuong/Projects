@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TSTaiSan" table="ts_taisan" lazy="true">
+		<id name="taiSanID" type="integer" column="TaiSanID">
+			 <generator class="native" />
+		</id>
+		<property name="loaiTaiSanID" column="LoaiTaiSanID" />
+		<property name="tenPhieuTaiSan" column="TenPhieuTaiSan" />
+		<property name="tenKhoaTaiSan" column="TenKhoaTaiSan" />
+		<property name="ghiChu" column="GhiChu" />
+		<property name="coTaiSanHinhThanhTrongTuongLai" column="CoTaiSanHinhThanhTrongTuongLai" />
+
+		<one-to-one name="taiSanBatDongSanKhongCoTaiSanGanLienVoiDat" class="TSBatDongSanKhongCoTaiSanGanLienVoiDat"  cascade="save-update" />
+		<one-to-one name="taiSanBeCa" class="TSBeCa"  cascade="save-update" />
+		<one-to-one name="taiSanCanHo" class="TSCanHo"  cascade="save-update" />
+		<one-to-one name="taiSanCongTrinhKienTruc" class="TSCongTrinhKienTruc"  cascade="save-update" />
+		<one-to-one name="taiSanCoPhieu" class="TSCoPhieu"  cascade="save-update" />
+		<one-to-one name="taiSanMayBay" class="TSMayBay"  cascade="save-update" />
+		<one-to-one name="taiSanMayMoc" class="TSMayMoc"  cascade="save-update" />
+		<one-to-one name="taiSanMoToXeMay" class="TSMoToXeMay"  cascade="save-update" />
+		<one-to-one name="taiSanNha" class="TSNha"  cascade="save-update" />
+		<one-to-one name="taiSanOTo" class="TSOTo"  cascade="save-update" />
+		<one-to-one name="taiSanSoTietKiem" class="TSSoTietKiem"  cascade="save-update" />
+		<one-to-one name="taiSanLaDongSanKhac" class="TSTaiSanLaDongSanKhac"  cascade="save-update" />
+		<one-to-one name="taiSanTauBien" class="TSTauBien"  cascade="save-update" />
+		<one-to-one name="taiSanTauCa" class="TSTauCa"  cascade="save-update" />
+		<one-to-one name="taiSanTauKeoGheThuyen" class="TSTauKeoGheThuyen"  cascade="save-update" />
+		<one-to-one name="taiSanTraiPhieu" class="TSTraiPhieu"  cascade="save-update" />
+	
+		<many-to-one name="loaiTaiSan" column="LoaiTaiSanID" class="DMLoaiTaiSan" insert="false" update="false" />
+
+	</class>
+</hibernate-mapping> 

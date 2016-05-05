@@ -130,6 +130,7 @@ label.error {
     font-size: 11px;
     margin-top: 3px;
     color: #DE8B74;
+    float:left;
 }
 
 input.error, textarea.error {

@@ -77,7 +77,6 @@ public class DanhMucHuyen extends BaseAction {
 				huyen.setHuyenTen(danhmuc_ten);
 				huyen.setTinhID(tinh_maso);
 				huyen.setMaBaoCao(maBaoCao);
-				huyen.setLaBenhVien(laBenhVien);
 			}
 			if (danhmuc_maso != null) {
 				sv.updateObject(huyen);

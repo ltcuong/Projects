@@ -1,0 +1,35 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TSBeCa" table="ts_beca" lazy="true">	
+		<id name="taiSanBeCaID" type="integer">
+            <column name="TaiSanBeCaID" />
+            <generator class="foreign">
+                <param name="property">taiSan</param>
+            </generator>
+        </id>
+        <one-to-one name="taiSan" class="TSTaiSan" constrained="true" />
+		
+		<property name="tenPhuongTien" column="TenPhuongTien"/>	
+		<property name="coQuanDangKy" column="CoQuanDangKy"/>	
+		<property name="namDong" column="NamDong"/>	
+		<property name="noiDong" column="NoiDong"/>
+		<property name="chieuDaiLmax" column="ChieuDaiLmax"/>	
+		<property name="chieuRongBmax" column="ChieuRongBmax"/>	
+		<property name="chieuCaoD" column="ChieuCaoD"/>	
+		<property name="ltk" column="Ltk"/>	
+		<property name="vatLieuVo" column="VatLieuVo"/>
+		<property name="tongDungTich" column="TongDungTich"/>	
+		<property name="kichThuocCabin" column="KichThuocCabin"/>	
+		<property name="kyHieuMay" column="KyHieuMay"/>
+		<property name="soMay" column="SoMay"/>	
+		<property name="congSuat" column="CongSuat"/>	
+		<property name="duocPhepSuDung" column="DuocPhepSuDung"/>
+		<property name="giayDKPhuongTienNgheCa" column="GiayDKPhuongTienNgheCa"/>
+		<property name="ngayCapGiayDKPhuongTienNgheCa" column="NgayCapGiayDKPhuongTienNgheCa"/>	
+		<property name="noiCapGiayDKPhuongTienNgheCa" column="NoiCapGiayDKPhuongTienNgheCa"/>	
+		<property name="soDangKyCu" column="SoDangKyCu"/>				
+								
+	</class>
+</hibernate-mapping> 

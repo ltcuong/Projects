@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TSOTo" table="ts_oto" lazy="true">	
+		<id name="taiSanOToID" type="integer">
+            <column name="taiSanOToID" />
+            <generator class="foreign">
+                <param name="property">taiSan</param>
+            </generator>
+        </id>
+
+		<property name="nhanHieu" column="NhanHieu"/>	
+		<property name="loaiXe" column="LoaiXe"/>			
+		<property name="mauSon" column="MauSon"/>
+		<property name="soChoNgoi" column="SoChoNgoi"/>
+		<property name="namSanXuat" column="NamSanXuat"/>
+		<property name="soKhung" column="SoKhung"/>			
+		<property name="soMay" column="SoMay"/>
+		<property name="taiTrong" column="TaiTrong"/>
+		<property name="tuTrong" column="TuTrong"/>
+		<property name="giayDangKySo" column="GiayDangKySo"/>
+		<property name="ngayCapGiayDangKy" column="NgayCapGiayDangKy"/>
+		<property name="noiCapGiayDangKy" column="NoiCapGiayDangKy"/>					
+		
+		<one-to-one name="taiSan" class="TSTaiSan" constrained="true" />		
+															
+	</class>
+</hibernate-mapping> 

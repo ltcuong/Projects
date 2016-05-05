@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="HDHuy" table="hd_huy" lazy="true">	
+		<id name="hopDongHuyID" type="integer">
+            <column name="HopDongHuyID" />
+            <generator class="foreign">
+                <param name="property">hopDong</param>
+            </generator>
+        </id>
+        <one-to-one name="hopDong" class="HDHopDong" constrained="true" />
+		
+		<property name="huyHopDongID" column="HuyHopDongID"/>
+		<property name="soHopDongHuy" column="SoHopDongHuy"/>
+		<property name="lyDoHuy" column="LyDoHuy"/>
+		<property name="phuongThucGiaoLaiTaiSan" column="PhuongThucGiaoLaiTaiSan"/>
+		<property name="ngayGiaoLaiTaiSan" column="NgayGiaoLaiTaiSan"/>
+		<property name="phuongThucGiaoLaiTien" column="PhuongThucGiaoLaiTien"/>
+		<property name="ngayGiaoLaiTien" column="NgayGiaoLaiTien"/>
+		<property name="boiThuongThietHai" column="BoiThuongThietHai"/>
+		<property name="thoaThuanKhac" column="ThoaThuanKhac"/>
+		<property name="camKetKhac" column="CamKetKhac"/>
+		
+	
+		<many-to-one name="huyHopDong" column="HuyHopDongID" class="HDHopDong" insert="false" update="false" />
+		
+	</class>
+
+</hibernate-mapping> 

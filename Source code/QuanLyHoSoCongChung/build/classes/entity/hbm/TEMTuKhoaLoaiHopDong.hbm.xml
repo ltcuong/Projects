@@ -1,0 +1,16 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entity">
+	<class name="TEMTuKhoaLoaiHopDong" table="tem_tukhoaloaihopdong" lazy="true">	
+		<id name="tuKhoaLoaiHopDongID" column="TuKhoaLoaiHopDongID"/>
+			
+		<property name="tenTuKhoaLoaiHopDong" column="TenTuKhoaLoaiHopDong"/>		
+		<property name="tenHienThiTuKhoaLoaiHopDong" column="TenHienThiTuKhoaLoaiHopDong"/>	
+		<property name="loaiHopDongID" column="LoaiHopDongID"/>	
+		
+		<many-to-one name="loaiHopDong" column="LoaiHopDongID" class="DMLoaiHopDong" insert="false" update="false" />				
+	</class>
+
+</hibernate-mapping> 

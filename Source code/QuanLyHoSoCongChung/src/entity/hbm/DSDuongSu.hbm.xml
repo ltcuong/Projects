@@ -1,0 +1,42 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="DSDuongSu" table="ds_duongsu" lazy="true">	
+		<id name="duongSuID" type="integer" column="DuongSuID">
+			<generator class="increment"></generator>
+		</id>			
+		<property name="hoTen" column="HoTen"/>	
+		<property name="ngaySinh" column="NgaySinh"/>	
+		<property name="namSinh" column="NamSinh"/>	
+		<property name="loaiGiayToID" column="LoaiGiayToID"/>	
+		<property name="soGiayTo" column="SoGiayTo"/>		
+		<property name="ngayCapGiayTo" column="NgayCapGiayTo"/>
+		<property name="noiCapGiayTo" column="NoiCapGiayTo"/>
+		<property name="quocTichID" column="QuocTichID"/>
+		<property name="tinhThuongTruID" column="TinhThuongTruID"/>
+		<property name="huyenThuongTruID" column="HuyenThuongTruID"/>
+		<property name="xaThuongTruID" column="XaThuongTruID"/>
+		<property name="soNhaThuongTru" column="SoNhaThuongTru"/>
+		<property name="diaChiLienHe" column="DiaChiLienHe"/>
+		<property name="tenToChuc" column="TenToChuc"/>
+		<property name="giayDangKyKinhDoanhSo" column="GiayDangKyKinhDoanhSo"/>
+		<property name="ngayCapGiayDangKyKinhDoanh" column="NgayCapGiayDangKyKinhDoanh"/>
+		<property name="noiCapGiayDangKyKinhDoanh" column="NoiCapGiayDangKyKinhDoanh"/>
+		<property name="soDienThoai" column="SoDienThoai"/>
+		<property name="chucVuNguoiDaiDien" column="ChucVuNguoiDaiDien"/>
+		<property name="giayUyQuyenSo" column="GiayUyQuyenSo"/>
+		<property name="ngayCapGiayUyQuyen" column="NgayCapGiayUyQuyen"/>
+		<property name="loaiDuongSuID" column="LoaiDuongSuID"/>
+		<property name="ngayTao" column="NgayTao"/>
+		<property name="nguoiTao" column="NguoiTao"/>
+		<property name="locked" column="Locked"/>
+		<property name="tinhTrangID" column="TinhTrangID"/>
+									
+		<many-to-one name="loaiGiayTo" column="LoaiGiayToID" class="DMLoaiGiayTo" insert="false" update="false" />
+		<many-to-one name="tinhThuongTru" column="TinhThuongTruID" class="DMTinh" insert="false" update="false" />
+		<many-to-one name="huyenThuongTru" column="HuyenThuongTruID" class="DMHuyen" insert="false" update="false" />
+		<many-to-one name="xaThuongTru" column="XaThuongTruID" class="DMXa" insert="false" update="false" />
+	</class>
+
+</hibernate-mapping> 

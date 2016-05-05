@@ -1,0 +1,29 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TSTraiPhieu" table="ts_traiphieu" lazy="true">	
+		<id name="taiSanTraiPhieuID" type="integer">
+            <column name="TaiSanTraiPhieuID" />
+            <generator class="foreign">
+                <param name="property">taiSan</param>
+            </generator>
+        </id>
+		<property name="loaiTraiPhieu" column="LoaiTraiPhieu"/>	
+		<property name="ngayPhatHanh" column="NgayPhatHanh"/>	
+		<property name="noiPhatHanhTraiPhieu" column="NoiPhatHanhTraiPhieu"/>			
+		<property name="menhGia" column="MenhGia"/>
+		<property name="kyHan" column="KyHan"/>
+		<property name="laiSuat" column="LaiSuat"/>			
+		<property name="thoiHanThanhToan" column="ThoiHanThanhToan"/>
+		<property name="hoTen" column="HoTen"/>
+		<property name="diaChi" column="DiaChi"/>
+		<property name="soGiayTo" column="SoGiayTo"/>
+		<property name="noiCapGiayTo" column="NoiCapGiayTo"/>		
+		<property name="ngayCapGiayTo" column="NgayCapGiayTo"/>
+		<property name="loaiGiayToID" column="LoaiGiayToID"/>
+		
+		 <one-to-one name="taiSan" class="TSTaiSan" constrained="true" />
+		<many-to-one name="loaiGiayTo" column="LoaiGiayToID" class="DMLoaiGiayTo" insert="false" update="false" />
+	</class>
+</hibernate-mapping> 

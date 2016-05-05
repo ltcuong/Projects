@@ -1,0 +1,26 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="HDGopVon" table="hd_gopvon" lazy="true">	
+		<id name="hopDongGopVonID" type="integer">
+            <column name="HopDongGopVonID" />
+            <generator class="foreign">
+                <param name="property">hopDong</param>
+            </generator>
+        </id>
+        <one-to-one name="hopDong" class="HDHopDong" constrained="true" />
+        
+		<property name="giaGopVon" column="GiaGopVon"/>
+		<property name="ngayThamDinhTaiSan" column="NgayThamDinhTaiSan"/>
+		<property name="mucDichGopVon" column="MucDichGopVon"/>
+		<property name="thoiHanGopVon" column="ThoiHanGopVon"/>
+		<property name="thoiHanKetThucGopVon" column="ThoiHanKetThucGopVon"/>
+		<property name="gopVonTuNgay" column="GopVonTuNgay"/>
+		<property name="loiNhuanGopVon" column="LoiNhuanGopVon"/>
+		<property name="phuongThucThanhToan" column="PhuongThucThanhToan"/>
+		<property name="cacThoaThuanKhac" column="CacThoaThuanKhac"/>
+		<property name="ngayCoHieuLuc" column="NgayCoHieuLuc"/>
+	</class>
+
+</hibernate-mapping> 

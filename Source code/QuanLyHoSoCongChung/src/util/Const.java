@@ -9,7 +9,7 @@ public interface Const {
 	
 	public static final int INDEX_COLUMN_MA_EXCEL = 20;
 	public static final int INDEX_COLUMN_LOAICHITIEU_EXCEL = 21;
-	public static String NUMBER_FORMAT = "###,###.####";
+	public static String NUMBER_FORMAT = "###,###.##";
 	public int ROW_PER_PAGE = 10;
 	public int INCONFLIG = 0;
 	public int CONFLIG = 1;
@@ -92,6 +92,8 @@ public interface Const {
 	public static final int CHITIEU_CONGDON = 1;
 	public static final int KYLUAT = 2;
     
-    
+	public static String SESSION_THONGTIN_HOPDONG = "ThongTinHopDong";
+	
+	//Template 
 }
 

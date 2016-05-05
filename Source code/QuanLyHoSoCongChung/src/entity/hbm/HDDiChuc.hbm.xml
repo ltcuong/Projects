@@ -1,0 +1,17 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="HDDiChuc" table="hd_dichuc" lazy="true">	
+		<id name="hopDongDiChucID" type="integer">
+            <column name="HopDongDiChucID" />
+            <generator class="foreign">
+                <param name="property">hopDong</param>
+            </generator>
+        </id>
+        <one-to-one name="hopDong" class="HDHopDong" constrained="true" />
+        
+		<property name="noiDungDiChuc" column="NoiDungDiChuc"/>	
+	</class>
+
+</hibernate-mapping> 

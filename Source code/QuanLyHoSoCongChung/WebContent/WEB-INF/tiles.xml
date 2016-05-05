@@ -26,6 +26,12 @@
 		<put-attribute name="body" value="" />
 	</definition>
 	
+	<definition name="printLayout" template="/views/layout/admin/PrintLayout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="headerpage" value="" />
+		<put-attribute name="menu" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
 	
 	<!-- Layout Quan Ly Nguoi Dung Begin -->
 	<definition name="layoutAdminUserManagerment" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
@@ -90,16 +96,6 @@
 						
 	<!-- Layout Quan Ly Nguoi Dung End -->
 	
-	<!-- Layout Quan Ly Chi Tieu Begin -->
-	<definition name="layoutQuanLyHopDong" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
-		<put-attribute name="title" value="" />				
-		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
-		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuQuanLyChiTieu.jsp" />
-		<put-attribute name="body" value="" />
-	</definition>
-	
-	<!-- Layout Quan Ly Chi Tieu End -->
-	
 	<!-- Layout Quan Ly Bao Cao Begin -->
 	<definition name="layoutQuanLyBaoCao" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
 		<put-attribute name="title" value="" />				
@@ -108,9 +104,6 @@
 		<put-attribute name="body" value="" />
 	</definition>
 	
-	
-	<!-- Layout Quan Ly Bao Cao End -->
-	<!-- Layout Quan Ly Bao Cao Begin -->
 	<definition name="layoutDanhMuc" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
 		<put-attribute name="title" value="" />				
 		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
@@ -163,5 +156,38 @@
 		<put-attribute name="body" value="/views/huongdan/HDTaiFileImport.jsp" />		
 	</definition>
 	<!-- Layout Huong Dan End -->
+	
+	<!-- Layout Quan Ly Hop Dong Begin -->
+	
+	<definition name="layoutQuanLyHopDong" template="/views/layout/admin/themedefault/LayoutAdmin.jsp">
+		<put-attribute name="title" value="" />				
+		<put-attribute name="menuTop" value="/views/layout/admin/themedefault/AdminTopMenu.jsp" />
+		<put-attribute name="leftMenu" value="/views/layout/admin/themedefault/AdminLeftMenuQuanLyHopDong.jsp" />
+		<put-attribute name="body" value="" />
+	</definition>
+	
+	<definition name="quanlyhopdong.HDTrangChu" extends="layoutQuanLyHopDong">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlyhopdong/HDTrangChu.jsp" />		
+	</definition>
+	
+	<definition name="quanlyhopdong.HDCapNhatThongTinHopDong" extends="layoutQuanLyHopDong">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlyhopdong/HDCapNhatThongTinHopDong.jsp" />		
+	</definition>
+	
+	<definition name="quanlyhopdong.HDCapNhatMauHopDong" extends="layoutQuanLyHopDong">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlyhopdong/HDCapNhatMauHopDong.jsp" />		
+	</definition>
+	
+	<definition name="quanlyhopdong.HDXemTruocThongTinHopDong" extends="printLayout">
+		<put-attribute name="title" value="" />
+		<put-attribute name="body" value="/views/quanlyhopdong/HDXemTruocThongTinHopDong.jsp" />		
+	</definition>
+	
+	
+	
+	<!-- Layout Quan Ly Hop Dong End -->
 	
 </tiles-definitions>

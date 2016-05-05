@@ -49,7 +49,7 @@ public class DanhMucXa extends BaseAction {
 		DanhMucService danhMucSV = new DanhMucService();
 		listTinh = danhMucSV.getAllTinh(Const.UNLOCKED);
 		if (listTinh != null && listTinh.size() != 0) {
-			listHuyen = danhMucSV.getAllHuyenByTinhMaSo(38);	
+			listHuyen = danhMucSV.getAllHuyenByTinhID(38, Const.UNLOCKED);
 		}
 		QuanLyNguoiDungService quanLyNguoiDungSV = new QuanLyNguoiDungService();
 		TBLFunctionDetails gr = quanLyNguoiDungSV.getPrivaleOnPage(memberShip, subAction);
@@ -91,7 +91,6 @@ public class DanhMucXa extends BaseAction {
 				dmXa.setXaTen(danhmuc_ten);
 				dmXa.setHuyenID(huyen_maso);
 				dmXa.setMaBaoCao(maBaoCao);
-				dmXa.setLaBenhVien(laBenhVien);
 			}
 			if (danhmuc_maso != null) {
 				sv.updateObject(dmXa);

@@ -1,0 +1,30 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="HDChuyenDoi" table="hd_chuyendoi" lazy="true">	
+		<id name="hopDongChuyenDoiID" type="integer">
+            <column name="HopDongChuyenDoiID" />
+            <generator class="foreign">
+                <param name="property">hopDong</param>
+            </generator>
+        </id>
+        <one-to-one name="hopDong" class="HDHopDong" constrained="true" />
+        
+		<property name="ngayGiaoTaiSanChoBenA" column="NgayGiaoTaiSanChoBenA"/>	
+		<property name="ngayGiaoTaiSanChoBenB" column="NgayGiaoTaiSanChoBenB"/>	
+		<property name="soTienChenhLech" column="SoTienChenhLech"/>		
+		<property name="benTraChenhLech" column="BenTraChenhLech"/>
+		<property name="phuongThucThanhToan" column="PhuongThucThanhToan"/>
+		<property name="benThanhToan" column="BenThanhToan"/>	
+		<property name="thoiHanThanhToan" column="ThoiHanThanhToan"/>
+		<property name="cacCamKetKhac" column="CacCamKetKhac"/>
+		<property name="phiBenAPhaiTra" column="PhiBenAPhaiTra"/>
+		<property name="phiBenBPhaiTra" column="PhiBenBPhaiTra"/>
+		<property name="ngayGiaoTaiSan" column="NgayGiaoTaiSan"/>
+		<property name="ngayCoHieuLuc" column="NgayCoHieuLuc"/>
+		<property name="cacThoaThuanKhac" column="CacThoaThuanKhac"/>
+  
+	</class>
+
+</hibernate-mapping> 

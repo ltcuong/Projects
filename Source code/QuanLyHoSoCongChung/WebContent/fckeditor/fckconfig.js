@@ -1,6 +1,6 @@
 ﻿/*
  * FCKeditor - The text editor for Internet - http://www.fckeditor.net
- * Copyright (C) 2003-2009 Frederico Caldeira Knabben
+ * Copyright (C) 2003-2010 Frederico Caldeira Knabben
  *
  * == BEGIN LICENSE ==
  *
@@ -114,22 +114,7 @@ FCKConfig.ToolbarSets["Default"] = [
 	['TextColor','BGColor'],
 	['FitWindow','ShowBlocks','-','About']		// No comma for the last row.
 ] ;
-FCKConfig.ToolbarSets["VinaPayroll"] = [
-                                	['Source','NewPage','Preview','-','Templates'],
-                                	['Cut','Copy','Paste','PasteText','PasteWord','-','SpellCheck'],
-                                	['Undo','Redo','-','Find','Replace','-','SelectAll','RemoveFormat'],
-                                	'/',
-                                	['Bold','Italic','Underline','StrikeThrough','-','Subscript','Superscript'],
-                                	['OrderedList','UnorderedList','-','Outdent','Indent','Blockquote','CreateDiv'],
-                                	['JustifyLeft','JustifyCenter','JustifyRight','JustifyFull'],
-                                	['Link','Unlink','Anchor'],
-                                	['Image','Flash','Table','Rule','Smiley','SpecialChar','PageBreak'],
-                                	['FitWindow','ShowBlocks','-','About'],
-                                	'/',
-                                	['Style','FontFormat','FontName','FontSize'],
-                                	['TextColor','BGColor']
-                                			// No comma for the last row.
-                                ] ;
+
 FCKConfig.ToolbarSets["Basic"] = [
 	['Bold','Italic','-','OrderedList','UnorderedList','-','Link','Unlink','-','About']
 ] ;
@@ -288,8 +273,8 @@ FCKConfig.JustifyClasses = [] ;
 // inline when creating the editor instance. In that cases you must set the
 // values of LinkBrowserURL, ImageBrowserURL and so on.
 // Custom implementations should just ignore it.
-var _FileBrowserLanguage	= 'jsp' ;	// asp | aspx | cfm | lasso | perl | php | py
-var _QuickUploadLanguage	= 'jsp' ;	// asp | aspx | cfm | lasso | perl | php | py
+var _FileBrowserLanguage	= 'php' ;	// asp | aspx | cfm | lasso | perl | php | py
+var _QuickUploadLanguage	= 'php' ;	// asp | aspx | cfm | lasso | perl | php | py
 
 // Don't care about the following two lines. It just calculates the correct connector
 // extension to use for the default File Browser (Perl uses "cgi").

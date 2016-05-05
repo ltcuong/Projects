@@ -1,0 +1,34 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TSTauBien" table="ts_taubien" lazy="true">	
+		<id name="taiSanTauBienID" type="integer">
+            <column name="TaiSanTauBienID" />
+            <generator class="foreign">
+                <param name="property">taiSan</param>
+            </generator>
+        </id>
+
+		<property name="tenTau" column="TenTau"/>	
+		<property name="loaiTau" column="LoaiTau"/>	
+		<property name="namDong" column="NamDong"/>			
+		<property name="noiDong" column="NoiDong"/>
+		<property name="chieuDaiLonNhat" column="ChieuDaiLonNhat"/>
+		<property name="chieuRongLonNhat" column="ChieuRongLonNhat"/>			
+		<property name="chieuCaoMan" column="ChieuCaoMan"/>
+		<property name="mucNuocToiDa" column="MucNuocToiDa"/>
+		<property name="dungTichToanThan" column="DungTichToanThan"/>
+		<property name="dungTichThucDung" column="DungTichThucDung"/>
+		<property name="trongTai" column="TrongTai"/>
+		<property name="congSuatMayChinh" column="CongSuatMayChinh"/>		
+		<property name="cangDangKy" column="CangDangKy"/>
+		<property name="ngayDangKy" column="NgayDangKy"/>
+		<property name="coQuanDangKiem" column="CoQuanDangKiem"/>
+		<property name="giayChungNhanDangKyTauSo" column="GiayChungNhanDangKyTauSo"/>
+		<property name="noiCapGiayChungNhanDangKyTauSo" column="NoiCapGiayChungNhanDangKyTauSo"/>
+		<property name="ngayCapGiayChungNhanDangKyTauSo" column="NgayCapGiayChungNhanDangKyTauSo"/>					
+				
+		 <one-to-one name="taiSan" class="TSTaiSan" constrained="true" />													
+	</class>
+</hibernate-mapping> 

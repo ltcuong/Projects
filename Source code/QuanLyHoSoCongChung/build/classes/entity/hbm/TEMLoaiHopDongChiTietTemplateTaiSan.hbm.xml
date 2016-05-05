@@ -1,0 +1,14 @@
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="entity">
+	<class name="TEMLoaiHopDongChiTietTemplateTaiSan" table="tem_loaihopdongchitet_templatetaisan" lazy="true">				
+		<composite-id> 	
+			<key-property name="loaiHopDongChiTietID" column="LoaiHopDongChiTietID" />				
+			<key-property name="templateTaiSanID" column="TemplateTaiSanID" />	
+		</composite-id> 	
+			
+		<many-to-one name="templateTaiSan" column="TemplateTaiSanID" class="TEMTemplateTaiSan" insert="false" update="false" />	
+		<many-to-one name="loaiHopDongChiTiet" column="LoaiHopDongChiTietID" class="DMLoaiHopDongChiTiet" insert="false" update="false" />							
+	</class>
+</hibernate-mapping> 
